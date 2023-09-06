@@ -1,5 +1,27 @@
-<%- include("partials/header1.ejs", {data: "create profile page"})%>
+<%- include("partials/header1.ejs", {data: "landing page"})%>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+    </head>
+    <body> -->
+        <h1> Let's go together!</h1>
+            <h2>Strangers are just friends you haven't met!</h2><br>
+                <form action="gotogether.com/login" method="post">
+                <!-- user input here -->
+                Email:
+                <input type="text" name="Email" placeholder="Email" required><br><br>
+                Password:
+                <input type="password" name="password" placeholder="Password" required><br><br>
+                <!-- submit button -->
+                <input type="submit" value="Log In">
+                <input type="submit" value="Sign Up">
 
-<h1>Landing Page</h1>
-
+                </form> <br>
+    <!-- </body>
+    </html> -->
+    
 <%- include("partials/footer.ejs") %>
