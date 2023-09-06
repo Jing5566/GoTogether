@@ -4,6 +4,17 @@ const express= require("express")
 const app = express()
 const port = process.env.PORT||3000
 const logger = require("morgan")
+
+// Grab the database information from mongoconnection
+// and inserts into file
+require('./connections/mongoconnection')
+
+
+// need to import our models
+const { GoTogetherModel } = require("./models/GoTogetherModel");
+
+
+
 app.use(logger("dev"))
 
 
