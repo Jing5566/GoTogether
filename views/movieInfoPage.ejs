@@ -1,5 +1,28 @@
 <%- include("partials/header1.ejs", {data: "create profile page"})%>
 
-<h1>Movie Information Page</h1>
+    <% if (data) {%>
+        <div class="box_container">
+          <h1 class="title"> <%= data.title %></h1>
+          <% let image = data.poster_path
+                      ? "https://image.tmdb.org/t/p/w200" + data.poster_path
+                      : "/assets/image.jpeg"
+          %>
+          <img src="<%= image %>" alt="<%= data.title %>" class="movie_image">
 
+          <p class="text_container"><%= data.overview %></p>
+
+          <div class="button1">
+            <form action="/viewProfilePage" method="get">
+            <button class="btn1-style" type="submit">Back</button>
+            <p class="small_text">View profile</p>
+            </form>
+          </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    <% } else { %>
+        <p>Movie not found.</p>
+    <% } %>
+  
 <%- include("partials/footer.ejs") %>
