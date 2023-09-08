@@ -5,7 +5,7 @@
 
 /* testing background color for all pages */
 /* needed to give a class name header to body so background colors can work */
-#body {
+.body {
   background-color: #f39ff2;
 }
 
