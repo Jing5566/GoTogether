@@ -50,6 +50,10 @@ app.get("/movieInfoPage", (req,res)=>{
     })
 })
 
+app.get("/homePage", (req,res)=>{
+    res.render("homePage.ejs")
+})
+
 app.get("/editProfilePage", (req,res)=>{
     res.render("editProfilePage.ejs")
 })

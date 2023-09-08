@@ -1,13 +1,12 @@
 /* background color for all pages*/
-body{
-  background-color:#FBFBFF;
+.body{
+  background-color: #FBFBFF;
 }
 
 .nav{
   position: relative;
-  display: flex;
+  display:flex;
   justify-content: space-between;
-  align-items: center;
   height: 50px;
   padding: 10px 20px;
   border-bottom: 1px solid #989AB8;
@@ -16,12 +15,12 @@ body{
 .logo {
   margin-left: 30px;
 }
+
 .searchbar {
   position: absolute;
   display: flex;
   align-items: center;
   margin-left: 220px;
-
 }
 
 .searchbar1{
@@ -65,8 +64,54 @@ body{
   cursor: pointer;
 }
 
+.navButton{
+  margin-left: 55%;
+  cursor: pointer;
+}
+
+.navButtonStyle{
+  display:block;
+  margin: 0 auto;
+  width: 45px;
+  height: 20px;
+  background-color: #FFE459;
+  border: none;
+  border-radius: 7px;
+  padding: 0px 15px 0px 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.plus{
+  position:absolute;
+  margin-top: -22px;
+  margin-left: 43px;
+}
+.navMyEvents{
+  margin-left: -6%;
+  cursor: pointer;
+}
+.navMessages{
+  margin-left: -6%;
+  cursor: pointer;
+}
+
+.navText{
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #0F231C;
+  text-align: center;
+}
+
+.navBtnText{
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #0F231C;
+  text-align: center;
+  margin-top: 4px;
+}
 /* Style the profile icon */
 .defaultProfile{
+  /* position: absolute; */
   background-color: #A5A5F5;
   height: 34px;
   width: 34px;
