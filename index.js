@@ -1,5 +1,7 @@
 // have installed express, ejs, morgan, dotenv,
 // can be installed: joi, nodemon
+
+require("dotenv").config()
 const express= require("express")
 const app = express()
 const port = process.env.PORT||3000
@@ -16,6 +18,8 @@ const { GoTogetherModel } = require("./models/GoTogetherModel");
 
 
 app.use(logger("dev"))
+
+app.use(express.static("public"))
 
 
 
