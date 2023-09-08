@@ -5,14 +5,14 @@
 
 /* testing background color for all pages */
 /* needed to give a class name header to body so background colors can work */
-.body {
+/* .body {
   background-color: #f39ff2;
-}
+} */
 
 /* background color for all pages*/
-/* body {
+.body {
   background-color: #fbfbff;
-} */
+}
 
 /* styling for the big purple box*/
 .box_container {
@@ -156,5 +156,5 @@ input {
   padding: 20px;
   box-sizing: border-box;
   border-radius: 15px;
-  background-color: #efe4a8;
+  background-color: lightblue;
 }
