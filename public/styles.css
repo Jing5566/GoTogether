@@ -3,6 +3,79 @@ body{
   background-color:#FBFBFF;
 }
 
+.nav{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #989AB8;
+}
+
+.logo {
+  margin-left: 30px;
+}
+.searchbar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-left: 220px;
+
+}
+
+.searchbar1{
+  width: 135px;
+  height: 27px;
+  border: 1px solid #989AB8;
+  border-radius: 7px 0px 0px 7px;
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #0F231C;
+}
+
+.searchbar2{
+  width: 135px;
+  height: 27px;
+  border: 1px solid #989AB8;
+  border-radius: 0px;
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #0F231C;
+}
+
+.searchbar1::placeholder{
+  color:#989AB8;
+  font-family: 'Inter';
+  font-size: 14px;
+}
+
+.searchbar2::placeholder{
+  color:#989AB8;
+  font-family: 'Inter';
+  font-size: 14px;
+}
+
+.searchButton {
+  background-color: #A5A5F5;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #989AB8;
+  border-radius: 0px 7px 7px 0px;;
+  cursor: pointer;
+}
+
+/* Style the profile icon */
+.defaultProfile{
+  background-color: #A5A5F5;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 2px solid #989AB8;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
 /* styling for the big purple box*/
 .box_container {
     position: relative;
