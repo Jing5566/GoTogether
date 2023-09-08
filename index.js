@@ -47,6 +47,10 @@ app.get("/movieInfoPage", (req,res)=>{
     res.render("movieInfoPage.ejs")
 })
 
+app.get("/homePage", (req,res)=>{
+    res.render("homePage.ejs")
+})
+
 
 
 

@@ -5,8 +5,8 @@
 
 /* testing background color for all pages */
 /* needed to give a class name header to body so background colors can work */
-.body {
-  background-color: #fbfbff;
+#body {
+  background-color: #f39ff2;
 }
 
 /* background color for all pages*/
@@ -141,4 +141,20 @@ input {
   margin-top: 25px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+/* this code is for the calendar that will function in the Home Page */
+#calendar {
+  float:left;
+  position: top;
+  width: 500px;
+  height: fit-content;
+  /* top: 200px;
+  bottom: 60px;
+  margin-bottom: 20px auto; */
+  border-right: 3px solid #989ab8;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #efe4a8;
 }
