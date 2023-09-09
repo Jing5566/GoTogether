@@ -1,4 +1,4 @@
-// have installed express, ejs, morgan, dotenv,
+// have installed express, ejs, morgan, dotenv,mongoose
 // can be installed: joi, nodemon
 
 require("dotenv").config()
@@ -22,7 +22,6 @@ app.use(logger("dev"))
 app.use(express.static("public"))
 
 
-
 app.get("/", (req,res)=>{
     res.redirect("/landingPage")
 })
@@ -44,7 +43,22 @@ app.get("/viewProfilePage", (req,res)=>{
 })
 
 app.get("/movieInfoPage", (req,res)=>{
-    res.render("movieInfoPage.ejs")
+    const api_key=process.env.TMDB_API_KEY
+    const baseUrl="https://api.themoviedb.org/3"
+    let route=`search/movie?include_adult=false&language=en-US&page=1&api_key=${api_key}&query=${req.query.titlesearch}`
+    let endpoint=`${baseUrl}/${route}`
+    console.log  ("endpoint", endpoint)
+    fetch(endpoint)
+    .then(response =>{
+        return response.json()
+    })
+    .then(data =>{
+        console.log(data)
+        res.render("movieInfoPage.ejs", {data:data.results[0]})
+    })
+    .catch(err=>{
+        console.log("Error from movie search fetch", err)
+    })
 })
 
 app.get("/homePage", (req,res)=>{
@@ -52,8 +66,16 @@ app.get("/homePage", (req,res)=>{
 })
 
 
+app.get("/editProfilePage", (req,res)=>{
+    res.render("editProfilePage.ejs")
+})
 
+app.get("/deleteProfilePage", (req,res)=>{
+    res.render("deleteProfilePage.ejs")
+})
 
-
+app.get("/deletionConfirmationPage", (req,res)=>{
+    res.render("deletionConfirmation.ejs")
+})
 
 app.listen(port,()=> console.log(`GoTogether is running on port${port}`))

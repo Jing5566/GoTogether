@@ -15,5 +15,44 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e4c9001638.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <p>header 2 works</p>
+  <body class="body"></body>
+      <div class="nav">
+
+        <div class="logo">
+            <img src="/GoTogether/public/assets/logos/logo.jpeg" alt="Logo">
+        </div>
+
+        <div class="searchbar">
+          <input class = "searchbar1" type="text" placeholder="Search events">
+          <input class = "searchbar2" type="text" placeholder="Austin TX">
+          <button class = "searchButton" type="submit">
+            <!-- <img src="GoTogether/public/assets/icons/navbar/magnifyGlass.png" alt="Search"> -->
+            <i class="fa-solid fa-magnifying-glass navIcon" style="color: #0F231C;"></i>
+          </button>
+        </div>
+
+        <div class="navButton">
+            <form action=# method="get">
+            <button class="navButtonStyle" type="submit"></button>
+            <div class="plus">
+            <i class="fa-solid fa-plus" style="color: #0F231C;"></i>
+            </div>
+            <p class="navBtnText">Create an event</p>
+
+        </form>
+        </div>
+
+        <div class="navMyEvents">
+          <i class="fa-regular fa-calendar fa-lg" style="color: #0F231C; margin-left:20px;"></i>
+          <p class="navText">My Events</p>
+        </div>
+
+        <div class="navMessages">
+          <i class="fa-regular fa-message fa-lg" style="color: #0F231C;margin-left:20px;"></i>
+          <p class="navText">Messages</p>
+        </div>
+
+        <div class="defaultProfile">
+          <i class="fa-regular fa-user fa-lg navIcon" style="color: #0F231C; margin-left: 6.3px;"></i>
+        </div>
+      </div>

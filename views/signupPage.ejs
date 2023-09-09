@@ -1,5 +1,53 @@
 <%- include("partials/header1.ejs", {data: "create profile page"})%>
 
-<h1>Signup Page</h1>
+<div class="box_container">
+    <h1 class="title">Sign up</h1>
+    <div>
+        <form style="margin-bottom:20px";>
+            <label>Email:</label>
+            <input
+            type="email"
+            name="email" required>
+            <br>
+
+            <label>Password:</label>
+            <input
+            type="password"
+            name="Password"
+            required>
+            <br>
+
+            <label>Confirm password:</label>
+            <input
+            type="password"
+            name="Password"
+            required>
+        </form>
+    </div>
+    <!-- button#1 code -->
+    <div class="button1">
+        <form action="#" method="get">
+        <button class="btn1-style"
+        type="submit">Log in</button>
+        <p class="small_text">View profile</p>
+        </form>
+    </div>
+
+    <!-- button#2 code -->
+    <div class="button2">
+        <form action="/viewProfilePage" method="get">
+        <button class="btn2-style" type="submit">Create my profile</button>
+        <p class="small_text"></p>
+    </form>
+    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
+<!-- <div class="clear"></div> -->
+    <!-- clear floats -->
+
+
 
 <%- include("partials/footer.ejs") %>
