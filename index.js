@@ -2,25 +2,24 @@
 // can be installed: joi, nodemon
 
 require("dotenv").config()
+const debug = require('debug')('index.js')
 const express= require("express")
 const app = express()
 const port = process.env.PORT||3000
-const logger = require("morgan")
 
 // Grab the database information from mongoconnection
 // and inserts into file
 require('./connections/mongoconnection')
 
-
 // need to import our models
 const { GoTogetherModel } = require("./models/GoTogetherModel");
 
-
-
-app.use(logger("dev"))
+if(process.env.NODE_ENV === 'dev'){
+    const logger = require("morgan")
+    app.use(logger("dev"))
+}
 
 app.use(express.static("public"))
-
 
 app.get("/", (req,res)=>{
     res.redirect("/landingPage")
@@ -47,13 +46,13 @@ app.get("/movieInfoPage", (req,res)=>{
     const baseUrl="https://api.themoviedb.org/3"
     let route=`search/movie?include_adult=false&language=en-US&page=1&api_key=${api_key}&query=${req.query.titlesearch}`
     let endpoint=`${baseUrl}/${route}`
-    console.log  ("endpoint", endpoint)
+    debug("endpoint", endpoint)
     fetch(endpoint)
     .then(response =>{
         return response.json()
     })
     .then(data =>{
-        console.log(data)
+        debug(data)
         res.render("movieInfoPage.ejs", {data:data.results[0]})
     })
     .catch(err=>{
