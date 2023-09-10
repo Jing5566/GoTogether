@@ -3,17 +3,13 @@
 const mongoose = require("mongoose")
 
 // define schema
-const GoTogetherUserSchema = mongoose.Schema(
-    {
+const GoTogetherUserSchema = mongoose.Schema({
         // mongoDB cannot store large images. 
         // Workaround is to utilize cloudinary to store the images
         // use url link
-        Profile_Image: [
-            {
-                url: String,
-                filename: String
-            }
-        ],
+        Profile_Image: {
+            type: String
+        },
 
         First_Name: {
             type: String,
@@ -32,8 +28,8 @@ const GoTogetherUserSchema = mongoose.Schema(
             required: [true, "Birthdate must be entered."]
         },
 
-        Age_Range: {
-            type: String
+        Age: {
+            type: Number
         },
 
         Gender: {
