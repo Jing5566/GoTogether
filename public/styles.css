@@ -273,3 +273,30 @@ input{
   border-radius: 15px;
   background-color: lightblue;
 }
+
+/* This is the start of Tom's CSS Styling */
+.box_containerview {
+  position: relative;
+  width: 557px;
+  height: fit-content;
+  top: 60px;
+  margin: 0 auto;
+  border: 1px solid #989AB8;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #F7F6FC;
+  overflow: auto;
+}
+
+.box_containerview img {
+  width: 20%;
+  margin: auto;
+  display: block;
+}
+
+.ProfileView{
+  list-style-type: none;
+}
+
+/* This is the end of Tom's CSS styling */

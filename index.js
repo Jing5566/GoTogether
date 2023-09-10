@@ -38,8 +38,10 @@ app.get("/createProfilePage", (req,res)=>{
     res.render("createProfilePage.ejs")
 })
 
-app.get("/viewProfilePage", (req,res)=>{
-    res.render("viewProfilePage.ejs")
+app.get("/viewProfilePage", async (req,res)=>{
+    const Users = await GoTogetherModel.find({});
+    console.log(Users)
+    res.render("viewProfilePage.ejs", { Users })
 })
 
 app.get("/movieInfoPage", (req,res)=>{
