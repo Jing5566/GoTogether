@@ -13,15 +13,22 @@
   border-bottom: 1px solid #989AB8;
 }
 
-.logo {
-  margin-left: 30px;
+.GTlogo {
+  position: absolute;
+  /* display: flex; */
+  margin-left: 50px;
+  width: 180px;;
+  height:auto;
+  margin-bottom: 30px;
+  /* align-items: center; */
 }
 
 .searchbar {
   position: absolute;
   display: flex;
   align-items: center;
-  margin-left: 220px;
+  margin-left: 275px;
+  margin-top: 5px;
 }
 
 .searchbar1{
@@ -173,7 +180,6 @@ and adjust size accordingly*/
     display: flex;
     justify-content: center;
   } */
-
 
 .btn1-style {
   background-color: #A5A5FF;
