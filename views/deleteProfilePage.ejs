@@ -1,5 +1,29 @@
-<%- include("partials/header2.ejs", {data: "create profile page"})%>
+<%- include("partials/header2.ejs", {data: "Delete Profile"})%>
 
-<h1>Delete Profile Page</h1>
+<div class="box_container">
+
+    <div class="boxMessage">
+        <p>Are you sure to delete your profile?</p>
+    </div>
+    <!-- button#1 code -->
+    <div class="button1">
+        <form action="/homePage" method="get">
+        <button class="btn1-style"
+        type="submit">Keep it</button>
+        </form>
+    </div>
+
+    <!-- button#2 code -->
+    <div class="button2">
+        <form action="/deletionConfirmationPage" method="get">
+        <button class="btn2-style" type="submit">Delete it</button>
+        <p class="small_text"></p>
+    </form>
+    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
 
 <%- include("partials/footer.ejs") %>
