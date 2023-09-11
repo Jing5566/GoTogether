@@ -315,7 +315,8 @@ input{
 }
 
 /* This is the start of Tom's CSS Styling */
-.box_containerview {
+
+.box_containerview { /* This is for the view page */
   position: relative;
   width: 557px;
   height: fit-content;
@@ -329,13 +330,13 @@ input{
   overflow: auto;
 }
 
-.box_containerview img {
+.box_containerview img { /* This is for the view page */
   width: 20%;
   margin: auto;
   display: block;
 }
 
-.ProfileView{
+.ProfileView{ /* This is for the view page */
   list-style-type: none;
 }
 
