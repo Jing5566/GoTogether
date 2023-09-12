@@ -333,7 +333,7 @@ input{
   overflow: auto;
 }
 
-.box_containerview img { /* This is for the view page */
+.box_containerView img { /* This is for the view page */
   width: 20%;
   margin: auto;
   display: block;
