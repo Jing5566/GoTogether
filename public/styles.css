@@ -171,6 +171,32 @@
 .dropdown:hover .dropbtn {background-color: #A5A5F5;}
 /* navbar styling ends here */
 
+/* landingPage styles starts here*/
+.landingPage_text{
+  position: relative;
+  width: 557px;
+  height: fit-content;
+  top: 120px;
+  margin: 0 auto;
+  border: 1px solid #989AB8;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color:rgba(247, 246, 252, 0.8);
+}
+
+.landingPage_subtext{
+  font-family: "Inter";
+  font-size: 20px;
+  color: #0f231c;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* landingPage styles ends here*/
+
+
+
 /* movieInfoPage styling starts here */
 /* styling for the big purple box*/
 .box_container {
@@ -184,6 +210,7 @@
     box-sizing: border-box;
     border-radius: 15px;
     background-color: #F7F6FC;
+    opacity: 0.8;
 }
 
 /* styling for headers*/
@@ -231,7 +258,7 @@ and adjust size accordingly*/
   border-radius: 7px;
   cursor: pointer;
   padding: 0px 15px 0px 15px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 8px 6px 0px rgba(0,0,0,0.3);
 }
 
 .button1 {
@@ -252,7 +279,7 @@ and adjust size accordingly*/
   border-radius: 7px;
   padding: 0px 15px 0px 15px;
   cursor: pointer;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
 .button2 {
@@ -295,11 +322,10 @@ input{
 
 .loginBtn{
  position:absolute;
- margin-top: -0.8%;
+ margin-top: -1%;
  left: 95px;
  font-size: 18px;
 }
-
 /* movieInfoPage styling starts here */
 
 /* Paragraph font for the landing page text under the header */
