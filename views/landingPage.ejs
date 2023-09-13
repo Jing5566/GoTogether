@@ -13,7 +13,7 @@
         <h1 class="overview"> Let's go together!</h1>
         <p class="landingPage_subtext">Strangers are just friends you haven't met!</p>
         <div>
-            <form style="margin-bottom:20px;">
+            <form style="margin-bottom:20px"; action="/homePage" method="get">
                 <!-- user input here -->
                 <label>Email:</label>
                 <input
@@ -29,15 +29,24 @@
                 minlength="6"
                 required>
                 <br>
+                <br>
+
+                <!-- log in Button -->
+                <div class="button1">
+                    <button class="btn1-style" 
+                    type="submit">Log in</button>
+                </div>
             </form>
         </div>
 
         <!-- Log In Button -->
-        <div class="button1">
+        <!-- <div class="button1">
             <form action="/homePage" method="get">
                 <button class="btn1-style" type="submit">Log in</button>
             </form>
-        </div>
+        </div> -->
+
+
 
         <!-- Sign Up Button -->
         <div class="button2">
