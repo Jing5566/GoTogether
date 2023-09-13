@@ -48,3 +48,80 @@ app.get("/profileCreate", (req, res) => {
     C_Profile.save();
     res.send(C_Profile)
 })
+
+Since I am messing with the Schema, I made a copy of the version that works for the time being!
+
+const GoTogetherUserSchema = mongoose.Schema({
+        // mongoDB cannot store large images. 
+        // Workaround is to utilize cloudinary to store the images
+        // use url link
+        Profile_Image: {
+            type: String
+        },
+
+        First_Name: {
+            type: String,
+            maxLength: [20, "Must be less than 20 characters"],
+            required: [true, "First Name required"]
+        },
+
+        Last_Name: {
+            type: String,
+            maxLength: [20, "Must be less than 20 characters"],
+            required: [true, "First Name required"]
+        },
+
+        Birthday: {
+            type: Date,
+            required: [true, "Birthdate must be entered."]
+        },
+
+        Age: {
+            type: Number
+        },
+
+        Gender: {
+            type: String
+        },
+
+        Current_City: {
+            type: String
+        },
+
+        Hometown: {
+            type: String
+        },
+
+        Profession: {
+            type: String
+        },
+        
+        Interests: {
+            type: String
+        },
+
+        // movie API to be used for this section?
+        Favorite_Movie: {
+            type: String
+        },
+        
+        Favorite_Artist: {
+            type: String
+        },
+
+        Favorite_Food: {
+            type: String
+        },
+
+        Languages: {
+            type: String
+        },
+
+        More_About_You: {
+            type: String,
+            maxLength: [500, "Must be less than 500 characters"]
+        }
+    }
+);
+
+Seeing as how the new edits to the Schema that I made worked, the version of the Schema Above is outdated.

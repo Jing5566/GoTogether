@@ -354,8 +354,12 @@ input{
   background-color: lightblue;
 }
 
+/* ---------------------------------------------------------- */
 /* This is the start of Tom's CSS Styling */
-.box_containerview {
+
+/* This is the start of the styling for the ViewProfilePage Route */
+
+.box_containerView { /* This is for the view page */
   position: relative;
   width: 557px;
   height: fit-content;
@@ -369,16 +373,47 @@ input{
   overflow: auto;
 }
 
-.box_containerview img {
+.box_containerView img { /* This is for the view page */
   width: 20%;
   margin: auto;
   display: block;
 }
 
-.ProfileView{
+.ProfileView{ /* This is for the view page */
   list-style-type: none;
 }
 
+/* This is the end of the viewProfilePage Route's Styling
+/* ---------------------------------------------------------- */
+/* This is the start of the createProfilePage Styling */
+
+.box_containerCreate { /* This for the create page */
+  position: relative;
+  width: 557px;
+  height: fit-content;
+  top: 60px;
+  margin: 0 auto;
+  border: 1px solid #989AB8;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #F7F6FC;
+  overflow: auto;
+}
+
+.CreateTopper {
+  text-align: center;
+}
+
+.CreateView{ /* This for the create page */
+  list-style-type: none;
+}
+
+.box_containerCreate .ImageHere {
+  justify-content: center;
+}
+/* This is the end of the createProfilePage Styling */
+/* ----------------------------------------------------------*/
 /* This is the end of Tom's CSS styling */
 
 /* deleteProfilePage styling starts here */

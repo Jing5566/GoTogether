@@ -1,5 +1,85 @@
 <%- include("partials/header1.ejs", {data: "Create Profile"})%>
 
-<h1>Create Profile Page</h1>
+<h1 class="CreateTopper">Create Profile Page</h1>
+    <div class="box_containerCreate">
+        <img src="/assets/icons/creat&viewProfilePages/defaultProfilePicture.png" class="ImageHere" alt="">
+        <form action="/createProfile" method="post">
+                <label for="User_Profile_Image">Profile Image: </label>
+                <input type="text" name="Profile_Image" id="User_Profile_Image" placeholder="Enter Image Address Here">
+            <ul class="CreateView">
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="Name_Icon">
+                    <label for="User_First_Name">First Name: </label>
+                    <input type="text" name="First_Name" id="User_First_Name" placeholder="Max of 20 characters! ">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="Name_Icon">
+                    <label for="User_Last_Name">Last Name: </label>
+                    <input type="text" name="Last_Name" id="User_Last_Name" placeholder="Max of 20 characters!">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/birthday.png" alt="">
+                    <label for="Birthdate">Birthday: </label>
+                    <input type="text" name="Birthday" id="Birthdate" placeholder="YYYY-MM-DD Format Please">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/ageRange.png" alt="">
+                    <label for="User_Age">Age: </label>
+                    <input type="text" name="Age" id="User_Age">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/gender.png" alt="">
+                    <label for="User_Gender">Gender: </label>
+                    <input type="text" name="Gender" id="User_Gender">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/currentCity.png" alt="">
+                    <label for="User_City">Current City: </label>
+                    <input type="text" name="Current_City" id="User_City">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/hometown.png" alt="">
+                    <label for="User_Hometown">Hometown: </label>
+                    <input type="text" name="Hometown" id="User_Hometown">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/profession.png" alt="">
+                    <label for="User_Profession">Profession: </label>
+                    <input type="text" name="Profession" id="User_Profession">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/interests.png" alt="">
+                    <label for="User_Interests">Interests: </label>
+                    <input type="text" name="Interests" id="User_Interests">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/movie.png" alt="">
+                    <label for="User_Favorite_Movie">Favorite Movie: </label>
+                    <input type="text" name="Favorite_Movie" id="User_Favorite_Movie">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/artist.png" alt="">
+                    <label for="User_Favorite_Artist">Favorite Artist: </label>
+                    <input type="text" name="Favorite_Artist" id="User_Favorite_Artist">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/food.png" alt="">
+                    <label for="User_Favorite_Food">Favorite Food: </label>
+                    <input type="text" name="Favorite_Food" id="User_Favorite_Food">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/language.png" alt="">
+                    <label for="User_Languages">Languages: </label>
+                    <input type="text" name="Languages" id="User_Languages">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/moreAboutYou.png" alt="">
+                    <label for="User_Brief_Summary">Brief Summary: </label>
+                    <input type="text" name="More_About_You" id="User_Brief_Summary">
+                </li>
+            </ul>
+            <button>Submit</button>
+        </form>
+    </div>
 
 <%- include("partials/footer.ejs") %>

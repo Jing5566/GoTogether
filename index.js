@@ -8,6 +8,10 @@ const port = process.env.PORT||3000
 const logger = require("morgan")
 app.use(express.static("public"))
 
+// Body Parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
+
 // Grab the database information from mongoconnection
 // and inserts into file
 require('./connections/mongoconnection')
@@ -36,6 +40,28 @@ app.get("/signupPage", (req,res)=>{
 
 app.get("/createProfilePage", (req,res)=>{
     res.render("createProfilePage.ejs")
+})
+
+app.post("/createProfile", (req, res)=>{
+    let newGoTogetherModel = new GoTogetherModel({
+        Profile_Image: req.body.Profile_Image,
+        First_Name: req.body.First_Name,
+        Last_Name: req.body.Last_Name,
+        Birthday: req.body.Birthday,
+        Age: req.body.Age,
+        Gender: req.body.Gender,
+        Current_City: req.body.Current_City,
+        Hometown: req.body.Hometown,
+        Profession: req.body.Profession,
+        Interests: req.body.Interests,
+        Favorite_Movie: req.body.Favorite_Movie,
+        Favorite_Artist: req.body.Favorite_Artist,
+        Favorite_Food: req.body.Favorite_Food,
+        Languages: req.body.Languages,
+        More_About_You: req.body.More_About_You
+    });
+    newGoTogetherModel.save();
+    res.send(newGoTogetherModel)
 })
 
 app.get("/viewProfilePage", async (req,res)=>{

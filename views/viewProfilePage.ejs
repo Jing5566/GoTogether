@@ -3,7 +3,7 @@
 <h1>View Profile Page</h1>
 
 <% for (let element of Users) { %>
-    <div class="box_containerview">
+    <div class="box_containerView">
         <img src="<%=element.Profile_Image%>" alt="">
         <ul class="ProfileView">
             <li> First Name: <%= element.First_Name %> </li>
@@ -19,9 +19,9 @@
             <li> Favorite Artist: <%= element.Favorite_Artist %> </li>
             <li> Favorite Food: <%= element.Favorite_Food %> </li>
             <li> Languages: <%= element.Languages %> </li>
-            <li> Brief Summary: <%= element.Summary_Of_You %> </li>
+            <li> Brief Summary: <%= element.More_About_You %> </li>
         </ul>
-        <button>Edit</button> <button>Finish</button>
+        <button class="btn1-style">Edit</button> <button class="btn2-style">Finish</button>
     </div>
     <% } %>
     <br>
