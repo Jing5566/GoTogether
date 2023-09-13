@@ -67,7 +67,6 @@ app.get("/homePage", (req,res)=>{
     res.render("homePage.ejs")
 })
 
-
 app.get("/editProfilePage", (req,res)=>{
     res.render("editProfilePage.ejs")
 })
@@ -77,7 +76,7 @@ app.get("/deleteProfilePage", (req,res)=>{
 })
 
 app.get("/deletionConfirmationPage", (req,res)=>{
-    res.render("deletionConfirmation.ejs")
+    res.render("deletionConfirmationPage.ejs")
 })
 
 app.listen(port,()=> console.log(`GoTogether is running on port${port}`))

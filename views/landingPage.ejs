@@ -1,51 +1,55 @@
-<%- include("partials/header1.ejs", {data: "landing page"})%>
-<!-- Landing Page BackgroundImage -->
-<style>
-    body {
-        background-image: url(assets/landingpage/outdoorsRunners.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>
-<div class="box_container">
-        <h1 class="title"> Let's go together!</h1>
-                <p class="overview">Strangers are just friends you haven't met!</p><br>
-                    <div>
-                        <form style="margin-bottom:20px;" action="/homePage" method="get">
-                        <!-- user input here -->
-                        Email:
-                        <input type="text" name="Email" placeholder="Email" required><br><br>
+<%- include("partials/header1.ejs", {data: "Landing Page" })%>
+    <!-- Landing Page BackgroundImage -->
+    <style>
+        body {
+            background-image: url(assets/landingpage/outdoorsRunners.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 80px;
+        }
+    </style>
 
-                        Password:
-                        <input type="password" name="password" placeholder="Password" required><br><br>
-                        <!-- submit button
-                        <input type="submit" value="Log In">
-                        <input type="submit" value="Sign Up"> -->
+    <div class="landingPage_text">
+        <h1 class="overview"> Let's go together!</h1>
+        <p class="landingPage_subtext">Strangers are just friends you haven't met!</p>
+        <div>
+            <form style="margin-bottom:20px;">
+                <!-- user input here -->
+                <label>Email:</label>
+                <input
+                type="email"
+                name="email" required>
+                <br>
 
-                        </form>
-                    </div>
+                <label>Password:</label>
+                <input
+                type="password"
+                name="Password"
+                maxlength="20"
+                minlength="6"
+                required>
+                <br>
+            </form>
+        </div>
 
-                    <!-- Log In Button -->
-                    <div class = "button1">
-                        <form action="/homePage" method="get">
-                            <button class="btn1-style"
-                            type="submit">Log in</button>
-                        </form>
-                    </div>
+        <!-- Log In Button -->
+        <div class="button1">
+            <form action="/homePage" method="get">
+                <button class="btn1-style" type="submit">Log in</button>
+            </form>
+        </div>
 
-                    <!-- Sign Up Button -->
-                    <div class = "button2">
-                        <form action="/signupPage" method="get">
-                            <button class="btn2-style"
-                            type="submit">Sign Up</button>
-                            <!-- <p class="small_text">View profile</p> -->
-                        </form>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+        <!-- Sign Up Button -->
+        <div class="button2">
+            <form action="/signupPage" method="get">
+                <button class="btn2-style" type="submit">Sign Up</button>
+                <!-- <p class="small_text">View profile</p> -->
+            </form>
+        </div>
+
+        <br>
+        <br>
+        <br>
     </div>
 
-
-<%- include("partials/footer.ejs") %>
+    <%- include("partials/footer.ejs") %>
