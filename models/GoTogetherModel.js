@@ -103,4 +103,4 @@ const GoTogetherUserSchema = mongoose.Schema({
     }
 );
 
-exports.GoTogetherModel = mongoose.model("user_info", GoTogetherUserSchema)
+exports.GoTogetherModel = mongoose.model("Profiles", GoTogetherUserSchema)
