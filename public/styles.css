@@ -1,6 +1,9 @@
 /* background color for all pages*/
 .body{
   background-color: #FBFBFF;
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* navbar styling starts here */
@@ -265,7 +268,7 @@ and adjust size accordingly*/
   position:absolute;
   /* display: flex; */
   margin-top: 36px;
-  left: 90px;
+  left: 95px;
   display: inline-block;
   font-family: "Inter";
   font-size: 18px;
@@ -284,8 +287,8 @@ and adjust size accordingly*/
 
 .button2 {
   position: absolute;
-  margin-top: 15px;
-  right: 90px;
+  margin-top: 36px;
+  right: 95px;
   display: inline-block;
   font-family: "Inter";
   font-size: 18px;
@@ -320,11 +323,18 @@ input{
   border-color: #0f231c;
 }
 
-.loginBtn{
+.leftBtn{
  position:absolute;
- margin-top: -1%;
+ margin-top: 3%;
  left: 95px;
  font-size: 18px;
+}
+
+.rightBtn{
+  position:absolute;
+  font-size: 18px;
+  margin-top: 3%;
+  right: 95px;
 }
 /* movieInfoPage styling starts here */
 
@@ -412,6 +422,16 @@ input{
 .box_containerCreate .ImageHere {
   justify-content: center;
 }
+
+.ImageHere{
+  display: block;
+  width: 110px;
+  height: auto;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
 /* This is the end of the createProfilePage Styling */
 /* ----------------------------------------------------------*/
 /* This is the end of Tom's CSS styling */
@@ -431,12 +451,18 @@ input{
 
 /* footer positioning */
 footer {
-  background: #989ab8;
+  margin-top: auto;
+  background-color: #D4C9F1;
+  opacity: 50%;
+  font-family: inter;
+  color:#0F231C
   font-size: 18px;
-  padding: 35px;
+  padding: 12px;
   text-align: center;
-  position: absolute;
-  right: 0;
+  display:block;
+
+  /* position: absolute; */
+  /* right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
 }

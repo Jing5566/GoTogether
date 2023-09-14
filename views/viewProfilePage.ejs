@@ -3,8 +3,9 @@
 <h1>View Profile Page</h1>
 
 <% for (let element of Users) { %>
-    <div class="box_containerView">
-        <img src="<%=element.Profile_Image%>" alt="">
+    <div class="box_containerCreate">
+        <p class="title">Profile</p>
+        <img src="<%=element.Profile_Image%>" alt="" class="ImageHere">
         <ul class="ProfileView">
             <li> First Name: <%= element.First_Name %> </li>
             <li> Last Name: <%= element.Last_Name %> </li>
@@ -21,7 +22,21 @@
             <li> Languages: <%= element.Languages %> </li>
             <li> Brief Summary: <%= element.More_About_You %> </li>
         </ul>
-        <button class="btn1-style">Edit</button> <button class="btn2-style">Finish</button>
+        <!-- button#1 code -->
+        <div class="button1">
+            <a href="/createProfilePage">
+            <button class="btn1-style"
+            type="submit">Edit</button>
+        </div>
+        <!-- button#2 code -->
+        <div class="button2">
+            <a href="/homePage">
+            <button class="btn2-style" type="submit">Finish</button>
+            <br>
+            <br>
+            <br>
+        </div>
+        <!-- <button class="btn1-style">Edit</button> <button class="btn2-style">Finish</button> -->
     </div>
     <% } %>
     <br>
