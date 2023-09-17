@@ -1,7 +1,5 @@
 <%- include("partials/header2.ejs", {data: "View Profile"})%>
 
-<h1>View Profile Page</h1>
-
 <% for (let element of Users) { %>
     <div class="box_containerCreate">
         <p class="title">Profile</p>
@@ -16,7 +14,8 @@
             <li> Hometown: <%= element.Hometown %> </li>
             <li> Profession: <%= element.Profession %> </li>
             <li> Interests: <%= element.Interests %> </li>
-            <li> Favorite Movie: <%= element.Favorite_Movie %> </li>
+            <a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"> Favorite Movie: <%= element.Favorite_Movie %></a>
+            <!-- <a href="/movieInfoPage"><li> Favorite Movie: <%= element.Favorite_Movie %> </li></a> -->
             <li> Favorite Artist: <%= element.Favorite_Artist %> </li>
             <li> Favorite Food: <%= element.Favorite_Food %> </li>
             <li> Languages: <%= element.Languages %> </li>
@@ -36,6 +35,7 @@
             <br>
             <br>
         </div>
+
         <!-- <button class="btn1-style">Edit</button> <button class="btn2-style">Finish</button> -->
     </div>
     <% } %>
@@ -45,14 +45,5 @@
     <br>
 
 
-
-
-
-<!-- JX added the following code to test the movie info. -->
-<form action="/movieInfoPage" method="get">
-    <label for="movies">Enter a Movie Title:</label>
-    <input type="text" name="titlesearch" id="movies">
-    <button type="submit">Search</button>
-</form>
 
 <%- include("partials/footer.ejs") %>
