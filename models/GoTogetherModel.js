@@ -28,7 +28,7 @@ const GoTogetherUserSchema = mongoose.Schema({
         },
 
         Birthday: {
-            type: Date,
+            type: String,
             required: [true, "Birthdate must be entered."],
             set: d => d === '' ? undefined : d
         },
