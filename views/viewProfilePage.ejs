@@ -2,6 +2,7 @@
 
 <% for (let element of Users) { %>
     <div class="box_containerCreate">
+        <div>
         <p class="title">Profile</p>
         <img src="<%=element.Profile_Image%>" alt="" class="ImageHere">
         <ul class="ProfileView">
@@ -14,36 +15,39 @@
             <li> Hometown: <%= element.Hometown %> </li>
             <li> Profession: <%= element.Profession %> </li>
             <li> Interests: <%= element.Interests %> </li>
-            <a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"> Favorite Movie: <%= element.Favorite_Movie %></a>
-            <!-- <a href="/movieInfoPage"><li> Favorite Movie: <%= element.Favorite_Movie %> </li></a> -->
+            <li> Favorite movie: <a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"> <%= element.Favorite_Movie %></a></li>
             <li> Favorite Artist: <%= element.Favorite_Artist %> </li>
             <li> Favorite Food: <%= element.Favorite_Food %> </li>
             <li> Languages: <%= element.Languages %> </li>
             <li> Brief Summary: <%= element.More_About_You %> </li>
         </ul>
-        <!-- button#1 code -->
-        <div class="button1">
-            <a href="/createProfilePage">
-            <button class="btn1-style"
-            type="submit">Edit</button>
-        </div>
-        <!-- button#2 code -->
-        <div class="button2">
-            <a href="/homePage">
-            <button class="btn2-style" type="submit">Finish</button>
-            <br>
-            <br>
-            <br>
-        </div>
-
-        <!-- <button class="btn1-style">Edit</button> <button class="btn2-style">Finish</button> -->
     </div>
-    <% } %>
-    <br>
-    <br>
-    <br>
-    <br>
 
+    <!-- button#1 code -->
+    <div class="button1">
+        <form action="/createProfilePage" method="get">
+        <button class="btn1-style"
+        type="submit">Edit</button>
+        </form>
+    </div>
 
+    <!-- button#2 code -->
+    <div class="button2">
+        <form action="/homePage" method="get">
+        <button class="btn2-style"
+        type="submit">Finish</button>
+    </form>
+
+    <br>
+    <br>
+    </div>
+    </div>
+
+<% } %>
+
+<br>
+<br>
+<br>
+<br>
 
 <%- include("partials/footer.ejs") %>
