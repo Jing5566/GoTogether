@@ -6,6 +6,7 @@
         <p class="title">Profile</p>
         <img src="<%=element.Profile_Image%>" alt="" class="ImageHere">
         <ul class="ProfileView">
+<<<<<<< HEAD
             <li> First Name: <%= element.First_Name %> </li>
             <li> Last Name: <%= element.Last_Name %> </li>
             <li> Birthday: <%= element.Birthday %> </li>
@@ -20,6 +21,64 @@
             <li> Favorite Food: <%= element.Favorite_Food %> </li>
             <li> Languages: <%= element.Languages %> </li>
             <li> Brief Summary: <%= element.More_About_You %> </li>
+=======
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="">
+                First Name: <%= element.First_Name %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="">
+                Last Name: <%= element.Last_Name %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/birthday.png" alt="">
+                Birthday: <%= element.Birthday %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/ageRange.png" alt="">
+                Age: <%= element.Age %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/gender.png" alt="">
+                Gender: <%= element.Gender %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/currentCity.png" alt="">
+                Current City: <%= element.Current_City %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/hometown.png" alt="">
+                Hometown: <%= element.Hometown %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/profession.png" alt="">
+                Profession: <%= element.Profession %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/interests.png" alt="">
+                Interests: <%= element.Interests %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/movie.png" alt="">
+                <a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"> Favorite Movie: <%= element.Favorite_Movie %></a>
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/artist.png" alt="">
+                Favorite Artist: <%= element.Favorite_Artist %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/food.png" alt="">
+                Favorite Food: <%= element.Favorite_Food %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/language.png" alt="">
+                Languages: <%= element.Languages %> 
+            </li>
+            <li>
+                <img src="/assets/icons/creat&viewProfilePages/moreAboutYou.png" alt="">
+                Brief Summary: <%= element.More_About_You %> 
+            </li>
+>>>>>>> 28470646fbd3e3555db7565a1c7026190062c6b0
         </ul>
     </div>
 
@@ -51,3 +110,5 @@
 <br>
 
 <%- include("partials/footer.ejs") %>
+
+
