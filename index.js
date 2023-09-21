@@ -19,12 +19,9 @@ require('./connections/mongoconnection')
 // need to import our models
 const { GoTogetherModel } = require("./models/GoTogetherModel");
 
-
-
 app.use(logger("dev"))
 
 app.use(express.static("public"))
-
 
 app.get("/", (req,res)=>{
     res.redirect("/landingPage")
@@ -75,7 +72,7 @@ app.get("/movieInfoPage", (req,res)=>{
     const baseUrl="https://api.themoviedb.org/3"
     let route=`search/movie?include_adult=false&language=en-US&page=1&api_key=${api_key}&query=${req.query.titlesearch}`
     let endpoint=`${baseUrl}/${route}`
-    console.log  ("endpoint", endpoint)
+    console.log ("endpoint", endpoint)
     fetch(endpoint)
     .then(response =>{
         return response.json()
