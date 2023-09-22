@@ -325,10 +325,10 @@ input{
 }
 
 .leftBtn{
- position:absolute;
- margin-top: 3%;
- left: 95px;
- font-size: 18px;
+  position:absolute;
+  margin-top: 3%;
+  left: 95px;
+  font-size: 18px;
 }
 
 .rightBtn{
@@ -349,26 +349,68 @@ input{
   text-align: center;
 }
 
-/* this code is for the calendar that will function in the Home Page */
-#calendar {
-  float:left;
-  position: top;
-  width: 500px;
+/* -------------------------------------------------------------------- */
+/* this code is for the Home Page */
+
+.container-fluid {
+  position: relative;
+  width: 95%;
   height: fit-content;
-  /* top: 200px;
-  bottom: 60px;
-  margin-bottom: 20px auto; */
-  border-right: 3px solid #989ab8;
+  top: 60px;
+  margin: 0 auto;
+  border: 1px solid #989AB8;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 15px;
-  background-color: lightblue;
+  background-color: #F7F6FC;
+  overflow: auto;
+} 
+
+/* this code is for the calendar that will function in the Home Page */
+#calendar {
+  float:left;
+  position: Top;
+  width: 500px;
+  height: fit-content;
+  margin-top: 20px;
+  /* top: 200px;
+  bottom: 60px;
+  margin-bottom: 20px auto; */
+  /* border-right: 3px solid #b8aa98; */
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: rgb(239, 188, 133);
 }
 
+/* this code for the invitation on the home page */
 .groot {
-  width: 600px;
-  float: right;
+  width: 200px;
+  float: left;
+  margin-top: 20px;
 }
+
+#groot_header {
+  margin-top: 20px;
+}
+
+#groot_ul {
+  margin-top: 20px;
+  float: right;
+
+}
+
+.event-title {
+  text-align: left;
+  color: #0F231C;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 12px;
+  
+}
+
+
 
 /* ---------------------------------------------------------- */
 /* This is the start of Tom's CSS Styling */
