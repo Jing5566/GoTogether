@@ -197,6 +197,11 @@
   margin-bottom: 30px;
   text-align: center;
 }
+
+.landingPage_labels label {
+  display: inline-block;
+  width: 110px;
+}
 /* landingPage styles ends here*/
 
 
@@ -337,6 +342,11 @@ input{
   margin-top: 3%;
   right: 95px;
 }
+
+.signupPage_labels label {
+  display: inline-block;
+  width: 110px;
+}
 /* movieInfoPage styling starts here */
 
 /* Paragraph font for the landing page text under the header */
@@ -441,6 +451,10 @@ input{
   list-style-type: none;
 }
 
+.ProfileView li {
+  margin: 5px;
+}
+
 
 /* This is the end of the viewProfilePage Route's Styling
 /* ---------------------------------------------------------- */
@@ -458,6 +472,11 @@ input{
   border-radius: 15px;
   background-color: #F7F6FC;
   overflow: auto;
+}
+
+.box_containerCreate label {
+  display: inline-block;
+  width: 110px;
 }
 
 .CreateTopper {
