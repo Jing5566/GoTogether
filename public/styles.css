@@ -365,6 +365,11 @@ input{
   background-color: lightblue;
 }
 
+.groot {
+  width: 600px;
+  float: right;
+}
+
 /* ---------------------------------------------------------- */
 /* This is the start of Tom's CSS Styling */
 
