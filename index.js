@@ -7,25 +7,40 @@ const app = express()
 const port = process.env.PORT||3000
 const logger = require("morgan")
 app.use(express.static("public"))
-
-// Body Parser
-app.use(express.json());
-app.use(express.urlencoded({ extended: false}));
+const mongoose = require('mongoose')
+const passport = require('passport')
+const passportLocalStrategy = require('passport-local')
+const passportLocalMongoose = require('passport-local-mongoose')
 
 // Grab the database information from mongoconnection
 // and inserts into file
 require('./connections/mongoconnection')
 
+// Body Parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
+
 // need to import our models
 // this model is used for Profiles
 const { GoTogetherModel } = require("./models/GoTogetherModel");
 // this model is used for Accounts
-const { UserLoginModel } = require("./models/UserLoginModel");
+const UserModel = require("./models/UserLoginModel")
 
+app.use(require('express-session')({
+    secret: "GoTogether",
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new passportLocalStrategy(UserModel.authenticate()));
+passport.serializeUser(UserModel.serializeUser());
+passport.deserializeUser(UserModel.deserializeUser());
 
 app.use(logger("dev"))
-
 app.use(express.static("public"))
+
 
 app.get("/", (req,res)=>{
     res.redirect("/landingPage")
@@ -39,14 +54,32 @@ app.get("/signupPage", (req,res)=>{
     res.render("signupPage.ejs")
 })
 
-app.post("/createAccount", (req ,res) => {
-    let newUserLoginModel = new UserLoginModel({
-        username: req.body.username,
-        password: req.body.password
+// app.post("/createAccount", (req ,res) => {
+//     let newUserLoginModel = new UserLoginModel({
+//         username: req.body.username,
+//         password: req.body.password
+//     })
+//     newUserLoginModel.save();
+//     res.redirect("/createProfilePage")
+// });
+
+app.post("/createAccount", function(req, res){
+    console.log(req.body)
+    let newUser = new UserModel({username: req.body.username});
+    UserModel.register(newUser, req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            return res.render("signupPage.ejs")
+        } else {
+            console.log("This is checking user", user)
+            passport.authenticate("local")(req, res, function(){
+                res.redirect("/createProfilePage");
+            })
+        }
     })
-    newUserLoginModel.save();
-    res.redirect("/createProfilePage")
-});
+})
+
+
 
 app.get("/createProfilePage", (req,res)=>{
     res.render("createProfilePage.ejs")

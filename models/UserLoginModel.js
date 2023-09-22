@@ -1,6 +1,7 @@
 // BLUEPRINT for UserLogins
 // will be used to store Emails and Passwords
 const mongoose = require("mongoose");
+const passportLocalMongoose = require('passport-local-mongoose')
 
 // this will define the schema
 const UserLoginSchema = mongoose.Schema({
@@ -26,4 +27,8 @@ const UserLoginSchema = mongoose.Schema({
     }
 });
 
-exports.UserLoginModel = mongoose.model("Accounts", UserLoginSchema)
+UserLoginSchema.plugin(passportLocalMongoose);
+
+// exports.UserLoginModel = mongoose.model("Accounts", UserLoginSchema)
+
+module.exports = mongoose.model('User', UserLoginSchema)
