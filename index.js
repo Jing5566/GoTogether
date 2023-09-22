@@ -41,9 +41,8 @@ app.get("/signupPage", (req,res)=>{
 
 app.post("/createAccount", (req ,res) => {
     let newUserLoginModel = new UserLoginModel({
-        Username: req.body.Username,
-        Email: req.body.Email,
-        Password: req.body.Password
+        username: req.body.username,
+        password: req.body.password
     })
     newUserLoginModel.save();
     res.redirect("/createProfilePage")
