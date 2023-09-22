@@ -17,14 +17,15 @@ app.use(express.urlencoded({ extended: false}));
 require('./connections/mongoconnection')
 
 // need to import our models
+// this model is used for Profiles
 const { GoTogetherModel } = require("./models/GoTogetherModel");
-
+// this model is used for Accounts
+const { UserLoginModel } = require("./models/UserLoginModel");
 
 
 app.use(logger("dev"))
 
 app.use(express.static("public"))
-
 
 app.get("/", (req,res)=>{
     res.redirect("/landingPage")
@@ -37,6 +38,16 @@ app.get("/landingPage", (req,res)=>{
 app.get("/signupPage", (req,res)=>{
     res.render("signupPage.ejs")
 })
+
+app.post("/createAccount", (req ,res) => {
+    let newUserLoginModel = new UserLoginModel({
+        Username: req.body.Username,
+        Email: req.body.Email,
+        Password: req.body.Password
+    })
+    newUserLoginModel.save();
+    res.redirect("/createProfilePage")
+});
 
 app.get("/createProfilePage", (req,res)=>{
     res.render("createProfilePage.ejs")
@@ -61,7 +72,7 @@ app.post("/createProfile", (req, res)=>{
         More_About_You: req.body.More_About_You
     });
     newGoTogetherModel.save();
-    res.send(newGoTogetherModel)
+    res.redirect("/homePage")
 })
 
 app.get("/viewProfilePage", async (req,res)=>{
@@ -75,7 +86,7 @@ app.get("/movieInfoPage", (req,res)=>{
     const baseUrl="https://api.themoviedb.org/3"
     let route=`search/movie?include_adult=false&language=en-US&page=1&api_key=${api_key}&query=${req.query.titlesearch}`
     let endpoint=`${baseUrl}/${route}`
-    console.log  ("endpoint", endpoint)
+    console.log ("endpoint", endpoint)
     fetch(endpoint)
     .then(response =>{
         return response.json()
@@ -93,8 +104,9 @@ app.get("/homePage", (req,res)=>{
     res.render("homePage.ejs")
 })
 
-app.get("/editProfilePage", (req,res)=>{
-    res.render("editProfilePage.ejs")
+app.get("/editProfilePage", async (req,res)=>{
+    const Users = await GoTogetherModel.find({})
+    res.render("editProfilePage.ejs", { Users })
 })
 
 app.get("/deleteProfilePage", (req,res)=>{

@@ -125,3 +125,6 @@ const GoTogetherUserSchema = mongoose.Schema({
 );
 
 Seeing as how the new edits to the Schema that I made worked, the version of the Schema Above is outdated.
+
+This is code I removed from the li for movie
+            <!-- <a href="/movieInfoPage"><li> Favorite Movie: <%# element.Favorite_Movie %> </li></a> -->
