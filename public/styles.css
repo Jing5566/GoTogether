@@ -390,7 +390,8 @@ input{
   padding: 20px;
   box-sizing: border-box;
   border-radius: 15px;
-  background-color: rgb(239, 188, 133);
+  /* background-color: rgb(239, 188, 133); */
+  background-color: #D4C9F1;
 }
 
 /* this code for the invitation on the home page */
