@@ -396,7 +396,7 @@ input{
 
 /* this code for the invitation on the home page */
 .groot {
-  width: 200px;
+  width: 300px;
   float: left;
   margin-top: 20px;
 }
@@ -419,6 +419,10 @@ input{
   letter-spacing: 1px;
   margin: 12px;
   
+}
+
+.event-info {
+  margin-top: 80px;
 }
 
 
