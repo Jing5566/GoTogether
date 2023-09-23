@@ -1,6 +1,8 @@
-<%- include("partials/header2.ejs", {data: "View Profile"})%>
+<%- include("partials/header2.ejs", {data: "View Profile"})%> <!-- This is the header for the viewProfilePage-->
 
-<% for (let element of Users) { %>
+<% for (let element of Users) { %> <!-- This is grabbing information passed to this route via a User, it then goes through
+each part User and grabs information that is attached to certain key values and makes a profile contained inside a div,
+it also has a button that fires a route that allows you to update your information-->
     <div class="box_containerCreate">
         <div>
         <p class="title">Profile</p>
@@ -73,7 +75,7 @@
         </form>
     </div>
 
-    <!-- button#2 code -->
+    <!-- button#2 code, allows you to go back to the home page -->
     <div class="button2">
         <form action="/homePage" method="get">
         <button class="btn2-style"
@@ -92,4 +94,4 @@
 <br>
 <br>
 
-<%- include("partials/footer.ejs") %>
+<%- include("partials/footer.ejs") %> <!-- This is the footer for this route-->
