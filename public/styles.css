@@ -399,6 +399,9 @@ input{
   width: 300px;
   float: left;
   margin-top: 20px;
+  border: 1px solid #989AB8;
+  box-sizing: border-box;
+  border-radius: 15px;
 }
 
 #groot_header {
@@ -423,7 +426,12 @@ input{
 
 .event-info {
   margin-top: 80px;
+  padding: 20px;
+  border: 1px solid #989AB8;
+  box-sizing: border-box;
+  border-radius: 15px;
 }
+
 
 
 
