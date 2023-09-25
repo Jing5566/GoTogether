@@ -1,6 +1,6 @@
-<%- include("partials/header1.ejs", {data: "Landing Page" })%>
+<%- include("partials/header1.ejs", {data: "Landing Page" })%> <!-- This is the header for the landingPage-->
     <!-- Landing Page BackgroundImage -->
-    <style>
+    <style> 
         body {
             background-image: url(assets/landingPage/outdoorsRunners.png);
             background-repeat: no-repeat;
@@ -9,7 +9,8 @@
         }
     </style>
 
-    <div class="small_box_container">
+    <div class="small_box_container"> <!-- This is the first route the user is going to see when the website is launched 
+it will ask the user to login if they already have an account or to make one if they do not have one-->
         <h1 class="overview"> Let's go together!</h1>
         <p class="landingPage_subtext">Strangers are just friends you haven't met!</p>
         <div class="landingPage_labels">
@@ -30,7 +31,7 @@
                 required>
                 <br>
 
-                <!-- log in Button -->
+                <!-- log in Button that authenticated a user if they have an account or sends them back to this route if their login failed -->
                 <div class="button1">
                     <button class="btn1-style"
                     type="submit">Log in</button>
@@ -38,22 +39,11 @@
             </form>
         </div>
 
-        <!-- Log In Button -->
-        <!-- <div class="button1">
-            <form action="/homePage" method="get">
-                <button class="btn1-style" type="submit">Log in</button>
-            </form>
-        </div> -->
-
-
-
-        <!-- Sign Up Button -->
+        <!-- Sign Up Button that takes a user to the signup page where they can enter information to create their account -->
         <div class="rightBtn">
             <a href="/signupPage">
                 <button class="btn2-style"
                 type="submit">Sign up</button></a>
-                <!-- <p class="small_text">View profile</p> -->
-
         </div>
 
         <br>
@@ -61,4 +51,4 @@
         <br>
     </div>
 
-    <%- include("partials/footer.ejs") %>
+    <%- include("partials/footer.ejs") %> <!-- This is the footer for the landingPage-->

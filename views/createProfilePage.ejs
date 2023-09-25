@@ -1,7 +1,9 @@
-<%- include("partials/header1.ejs", {data: "Create Profile"})%>
+<%- include("partials/header1.ejs", {data: "Create Profile"})%> <!-- This is the header for the createprofilepage-->
 
 
-    <div class="box_containerCreate">
+    <div class="box_containerCreate"> <!-- This container will hold the form that the user will fill out with their
+                                            with their profile information, once they hit the submit button, it will be sent to
+                                            our database!-->
         <p class="title">Create Profile Page</p>
         <img src="/assets/icons/creat&viewProfilePages/defaultProfilePicture.png" class="ImageHere" alt="blank profile image">
         <form action="/createProfile" method="post">
@@ -82,7 +84,7 @@
                     <input type="text" name="More_About_You" id="User_Brief_Summary" maxlength="500" placeholder="Not Required">
                 </li>
             </ul>
-            <div class="button2">
+            <div class="button2"> <!-- This button will send the info in the form to our database!-->
                 <button class="btn2-style" type="submit">Submit</button>
                 <br>
                 <br>
@@ -91,4 +93,4 @@
         </form>
     </div>
 
-<%- include("partials/footer.ejs") %>
+<%- include("partials/footer.ejs") %> <!-- This is the footer for the createprofile page-->

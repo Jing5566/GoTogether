@@ -1,11 +1,12 @@
-<%- include("partials/header2.ejs", {data: "Delete Profile"})%>
+<%- include("partials/header2.ejs", {data: "Delete Profile"})%> <!-- This is the header for the deleteProfilePage-->
 
-<div class="small_box_container">
+<div class="small_box_container"> <!-- This is a container asking the user if they are sure that they want to delete their
+                                        account information-->
 
     <div class="boxMessage">
         <p>Are you sure you want to delete your profile?</p>
     </div>
-    <!-- button#1 code -->
+    <!-- button#1 code  This button take the user back to the homepage if they do not wish to delete their account-->
     <div class="button1">
         <form action="/homePage" method="get">
         <button class="btn1-style"
@@ -13,7 +14,7 @@
         </form>
     </div>
 
-    <!-- button#2 code -->
+    <!-- button#2 code This button will run a route that removes their profile from our database-->
     <div class="button2">
         <form action="/deletionConfirmationPage" method="get">
         <button class="btn2-style" type="submit">Delete it</button>

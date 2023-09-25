@@ -1,6 +1,7 @@
-<%- include("partials/header2.ejs", {data: "Favorite Movie"})%>
+<%- include("partials/header2.ejs", {data: "Favorite Movie"})%> <!-- This is the header for the movieInfoPage -->
 
-    <% if (data) {%>
+    <% if (data) {%> <!-- if the data was successfully pulled here, use it to fill out the div with the name of the movie,
+                          an image of the poster, as well as a description of the movie-->
         <div class="box_container">
           <h1 class="title"> <%= data.title %></h1>
           <% let image = data.poster_path
@@ -22,8 +23,8 @@
             <br>
             <br>
         </div>
-    <% } else { %>
+    <% } else { %> <!-- if the movie data was not pulled, supply a paragraph that says "Movie not found."-->
         <p>Movie not found.</p>
     <% } %>
 
-<%- include("partials/footer.ejs") %>
+<%- include("partials/footer.ejs") %> <!-- This is the footer for the movieInfoPage-->
