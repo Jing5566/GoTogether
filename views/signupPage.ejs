@@ -1,12 +1,12 @@
-<%- include("partials/header1.ejs", {data: "Sign Up"})%> <!-- This is the header for the signupPage -->
+<%- include("partials/newHeader1.ejs", {data: "Sign Up"})%> <!-- This is the header for the signupPage -->
 
-<div class="small_box_container"> <!-- This div will collect the information that the user would like to use to create their 
+<div class="small_box_container"> <!-- This div will collect the information that the user would like to use to create their
                                         account and once filled out, will be sent to the database upon pressing Create Account-->
     <h1 class="title">Sign up</h1>
     <div class="signupPage_labels">
         <form style="margin-bottom:20px"; action="/createAccount" method="post">
             <label for="User_Username">Username:</label>
-            <input 
+            <input
             type="text"
             name="Username"
             maxlength="15"
