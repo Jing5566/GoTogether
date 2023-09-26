@@ -121,7 +121,7 @@ app.get("/homePage", (req,res)=>{
 // This route is what you see upon clicking the edit button in your profile tab, it fills in the information in your profile
 // in the submitted fields and allow you to update your profile
 app.get("/editProfilePage", async (req,res)=>{
-    const Users = await GoTogetherModel.find({})
+    const Users = await GoTogetherModel.findOne({})
     res.render("editProfilePage.ejs", { Users })
 })
 

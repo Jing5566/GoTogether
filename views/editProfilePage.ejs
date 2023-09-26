@@ -1,82 +1,94 @@
 <%- include("partials/header1.ejs", {data: "Edit Profile"})%> <!-- This is the header fo the edit profile page -->
 
-<% for (let element of Users) { %> <!-- This is code is going to change -->
-    <div class="box_containerCreate">
-        <p class="title">Profile</p>
-        <img src="<%=element.Profile_Image%>" alt="" class="ImageHere">
-        <ul class="ProfileView">
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="">
-                First Name: <%= element.First_Name %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="">
-                Last Name: <%= element.Last_Name %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/birthday.png" alt="">
-                Birthday: <%= element.Birthday %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/ageRange.png" alt="">
-                Age: <%= element.Age %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/gender.png" alt="">
-                Gender: <%= element.Gender %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/currentCity.png" alt="">
-                Current City: <%= element.Current_City %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/hometown.png" alt="">
-                Hometown: <%= element.Hometown %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/profession.png" alt="">
-                Profession: <%= element.Profession %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/interests.png" alt="">
-                Interests: <%= element.Interests %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/movie.png" alt="">
-                <a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"> Favorite Movie: <%= element.Favorite_Movie %></a>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/artist.png" alt="">
-                Favorite Artist: <%= element.Favorite_Artist %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/food.png" alt="">
-                Favorite Food: <%= element.Favorite_Food %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/language.png" alt="">
-                Languages: <%= element.Languages %> 
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/moreAboutYou.png" alt="">
-                Brief Summary: <%= element.More_About_You %> 
-            </li>
-        </ul>
-        <!-- button#1 code This code is going to change -->
-        <div class="button1">
-            <a href="/createProfilePage">
-            <button class="btn1-style"
-            type="submit">Edit</button>
-        </div>
-        <!-- button#2 code This code is going to change -->
-        <div class="button2">
-            <a href="/homePage">
-            <button class="btn2-style" type="submit">Finish</button>
-            <br>
-            <br>
-            <br>
-        </div>
-    </div>
-    <% } %>
+<div class="box_containerCreate"> <!-- This container will hold the form that the user will fill out with their
+with their profile information, once they hit the submit button, it will be sent toour database!-->
+    <p class="title">Create Profile Page</p>
+    <img src="/assets/icons/creat&viewProfilePages/defaultProfilePicture.png" class="ImageHere" alt="blank profile image">
+        <form action="/createProfile" method="post">
+            <ul class="CreateView">
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/addImage.png" alt="">
+                    <label for="User_Profile_Image">Profile Image: </label>
+                    <input type="text" name="Profile_Image" id="User_Profile_Image" placeholder="Enter Image Address Here">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="Name_Icon">
+                    <label for="User_First_Name">First Name: </label>
+                    <input type="text" name="First_Name" id="User_First_Name" value="<%= Users.First_Name  %>" maxlength="20" required>
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="Name_Icon">
+                    <label for="User_Last_Name">Last Name: </label>
+                    <input type="text" name="Last_Name" id="User_Last_Name" value="<%= Users.Last_Name %>" maxlength="20" required>
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/birthday.png" alt="">
+                    <label for="Birthdate">Birthday: </label>
+                    <input type="text" name="Birthday" id="Birthdate" value="<%= Users.Birthday %>" Format Please" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/ageRange.png" alt="">
+                    <label for="User_Age">Age: </label>
+                    <input type="text" name="Age" id="User_Age" value="<%= Users.Age %>">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/gender.png" alt="">
+                    <label for="User_Gender">Gender: </label>
+                    <input type="text" name="Gender" id="User_Gender" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/currentCity.png" alt="">
+                    <label for="User_City">Current City: </label>
+                    <input type="text" name="Current_City" id="User_City" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/hometown.png" alt="">
+                    <label for="User_Hometown">Hometown: </label>
+                    <input type="text" name="Hometown" id="User_Hometown" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/profession.png" alt="">
+                    <label for="User_Profession">Profession: </label>
+                    <input type="text" name="Profession" id="User_Profession" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/interests.png" alt="">
+                    <label for="User_Interests">Interests: </label>
+                    <input type="text" name="Interests" id="User_Interests" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/movie.png" alt="">
+                    <label for="User_Favorite_Movie">Favorite Movie: </label>
+                    <input type="text" name="Favorite_Movie" id="User_Favorite_Movie" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/artist.png" alt="">
+                    <label for="User_Favorite_Artist">Favorite Artist: </label>
+                    <input type="text" name="Favorite_Artist" id="User_Favorite_Artist" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/food.png" alt="">
+                    <label for="User_Favorite_Food">Favorite Food: </label>
+                    <input type="text" name="Favorite_Food" id="User_Favorite_Food" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/language.png" alt="">
+                    <label for="User_Languages">Languages: </label>
+                    <input type="text" name="Languages" id="User_Languages" placeholder="Not Required">
+                </li>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/moreAboutYou.png" alt="">
+                    <label for="User_Brief_Summary">Brief Summary: </label>
+                    <input type="text" name="More_About_You" id="User_Brief_Summary" maxlength="500" placeholder="Not Required">
+                </li>
+                </ul>
+            <div class="button2"> <!-- This button will send the info in the form to our database!-->
+                <button class="btn2-style" type="submit">Submit</button>
+<br>
+<br>
+<br>
+            </div>
+        </form>
+</div>
 
 <%- include("partials/footer.ejs") %> <!-- This code is going to change -->
