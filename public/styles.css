@@ -9,7 +9,6 @@ body {
   /* navbar styling starts*/
 .custom-navbar {
   border-bottom: 1px solid #989AB8;
-  /* height: 60px; */
   padding-top: 0;
   padding-bottom: 0;
   margin-top: 0;
@@ -18,11 +17,8 @@ body {
 
   /* styles for the text underneath the icon */
 .icon-text-container {
-  /* display: flex; */
   text-align: center;
-  /*Center text within the container */
-  width: 70px;
-  /* padding: 0px; */
+  width: 50px;
   font-size: 12px;
   color: #0F231C;
   }
@@ -33,17 +29,18 @@ body {
   color: #0F231C;
   }
 
+/* .icon-text-container p{
+  font-size: 10px;
+} */
 
   /* styles for the navbar buttons */
   .custom-nav-button {
   background-color: #A5A5F5;
   }
 
-
   .custom-nav-button:hover {
   background-color: #A5A5F5;
   }
-
 
   /* styles for the search bars */
   .nav-search {
