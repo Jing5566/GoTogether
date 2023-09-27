@@ -87,7 +87,6 @@ app.post("/createProfile", (req, res)=>{
 // get request
 app.get("/viewProfilePage", async (req,res)=>{
     const Users = await GoTogetherModel.find({});
-    console.log(Users)
     res.render("viewProfilePage.ejs", { Users })
 })
 
@@ -123,6 +122,33 @@ app.get("/homePage", (req,res)=>{
 app.get("/editProfilePage", async (req,res)=>{
     const Users = await GoTogetherModel.findOne({})
     res.render("editProfilePage.ejs", { Users })
+})
+
+app.post("/editProfile", async (req, res) => {
+    const { Profile_Image, First_Name, Last_Name, Birthday,
+            Age, Gender, Current_City, Hometown, Profession, Interests,
+        Favorite_Movie, Favorite_Artist, Favorite_Food, Languages, More_About_You } = req.body;
+        const currentProfile = await GoTogetherModel.findOne({})
+        if (!currentProfile) {
+            return res.status(404).send("Could not retrieve profile");
+        }
+        currentProfile.Profile_Image = Profile_Image
+        currentProfile.First_Name = First_Name
+        currentProfile.Last_Name = Last_Name
+        currentProfile.Birthday = Birthday
+        currentProfile.Age = Age
+        currentProfile.Gender = Gender
+        currentProfile.Current_City = Current_City
+        currentProfile.Hometown = Hometown
+        currentProfile.Profession = Profession
+        currentProfile.Interests = Interests
+        currentProfile.Favorite_Movie = Favorite_Movie
+        currentProfile.Favorite_Artist = Favorite_Artist
+        currentProfile.Favorite_Food = Favorite_Food
+        currentProfile.Languages = Languages
+        currentProfile.More_About_You = More_About_You
+        await currentProfile.save();
+        res.redirect("/viewProfilePage");
 })
 
 // This route is what shows when you select the delete profile button in the homepage, it then takes you to a confirmation page
