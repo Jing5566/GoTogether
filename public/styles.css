@@ -513,6 +513,10 @@ input{
   margin-right: auto;
   margin-bottom: 20px;
 }
+
+.required {
+  color: red;
+}
 /* This is the end of the createProfilePage Styling */
 /* ----------------------------------------------------------*/
 /* This is the start of editProfilePage Styling */

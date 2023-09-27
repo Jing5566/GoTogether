@@ -4,7 +4,7 @@
     <div class="box_containerCreate"> <!-- This container will hold the form that the user will fill out with their
                                             with their profile information, once they hit the submit button, it will be sent to
                                             our database!-->
-        <p class="title">Create Profile Page</p>
+        <p class="title">Create Your Profile</p>
         <img src="/assets/icons/creat&viewProfilePages/defaultProfilePicture.png" class="ImageHere" alt="blank profile image">
         <form action="/createProfile" method="post">
             <ul class="CreateView">
@@ -15,76 +15,77 @@
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="Name_Icon">
-                    <label for="User_First_Name">First Name: </label>
+                    <label for="User_First_Name"><span class="required">*</span> First Name: </label>
                     <input type="text" name="First_Name" id="User_First_Name" placeholder="Max of 20 characters!" maxlength="20" required>
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="Name_Icon">
-                    <label for="User_Last_Name">Last Name: </label>
+                    <label for="User_Last_Name"><span class="required">*</span> Last Name: </label>
                     <input type="text" name="Last_Name" id="User_Last_Name" placeholder="Max of 20 characters!" maxlength="20" required>
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/birthday.png" alt="">
-                    <label for="Birthdate">Birthday: </label>
+                    <label for="Birthdate"><span class="required">*</span> Birthday: </label>
                     <input type="text" name="Birthday" id="Birthdate" placeholder="YYYY-MM-DD Format Please" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/ageRange.png" alt="">
                     <label for="User_Age">Age: </label>
-                    <input type="text" name="Age" id="User_Age" placeholder="Not Required">
+                    <input type="text" name="Age" id="User_Age" placeholder="How old are you?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/gender.png" alt="">
                     <label for="User_Gender">Gender: </label>
-                    <input type="text" name="Gender" id="User_Gender" placeholder="Not Required">
+                    <input type="text" name="Gender" id="User_Gender" placeholder="What's your preference?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/currentCity.png" alt="">
                     <label for="User_City">Current City: </label>
-                    <input type="text" name="Current_City" id="User_City" placeholder="Not Required">
+                    <input type="text" name="Current_City" id="User_City" placeholder="Where do you live?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/hometown.png" alt="">
                     <label for="User_Hometown">Hometown: </label>
-                    <input type="text" name="Hometown" id="User_Hometown" placeholder="Not Required">
+                    <input type="text" name="Hometown" id="User_Hometown" placeholder="Where are you from?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/profession.png" alt="">
                     <label for="User_Profession">Profession: </label>
-                    <input type="text" name="Profession" id="User_Profession" placeholder="Not Required">
+                    <input type="text" name="Profession" id="User_Profession" placeholder="What do you do?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/interests.png" alt="">
                     <label for="User_Interests">Interests: </label>
-                    <input type="text" name="Interests" id="User_Interests" placeholder="Not Required">
+                    <input type="text" name="Interests" id="User_Interests" placeholder="What interests you?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/movie.png" alt="">
                     <label for="User_Favorite_Movie">Favorite Movie: </label>
-                    <input type="text" name="Favorite_Movie" id="User_Favorite_Movie" placeholder="Not Required">
+                    <input type="text" name="Favorite_Movie" id="User_Favorite_Movie" placeholder="What do you watch?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/artist.png" alt="">
                     <label for="User_Favorite_Artist">Favorite Artist: </label>
-                    <input type="text" name="Favorite_Artist" id="User_Favorite_Artist" placeholder="Not Required">
+                    <input type="text" name="Favorite_Artist" id="User_Favorite_Artist" placeholder="What do you listen to?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/food.png" alt="">
                     <label for="User_Favorite_Food">Favorite Food: </label>
-                    <input type="text" name="Favorite_Food" id="User_Favorite_Food" placeholder="Not Required">
+                    <input type="text" name="Favorite_Food" id="User_Favorite_Food" placeholder="What do you like to eat?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/language.png" alt="">
                     <label for="User_Languages">Languages: </label>
-                    <input type="text" name="Languages" id="User_Languages" placeholder="Not Required">
+                    <input type="text" name="Languages" id="User_Languages" placeholder="What do you speak?">
                 </li>
                 <li>
                     <img src="/assets/icons/creat&viewProfilePages/moreAboutYou.png" alt="">
                     <label for="User_Brief_Summary">Brief Summary: </label>
-                    <input type="text" name="More_About_You" id="User_Brief_Summary" maxlength="500" placeholder="Not Required">
+                    <input type="text" name="More_About_You" id="User_Brief_Summary" maxlength="500" placeholder="Describe yourself!">
                 </li>
             </ul>
             <div class="button2"> <!-- This button will send the info in the form to our database!-->
+                <p><span class="required">*</span> Required Field</p>
                 <button class="btn2-style" type="submit">Submit</button>
                 <br>
                 <br>
