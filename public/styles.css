@@ -254,7 +254,7 @@ input {
   text-align: center;
 }
 
-.home-container-fluid {
+/* .container-fluid {
   position: relative;
   width: 95%;
   height: fit-content;
@@ -266,7 +266,7 @@ input {
   border-radius: 15px;
   background-color: #F7F6FC;
   overflow: auto;
-  }
+  } */
 
 /* this code is for the calendar that will function in the Home Page */
 #calendar {
@@ -287,14 +287,13 @@ input {
 }
 
   /* this code for the invitation on the home page */
-  .groot {
+  /* .groot {
     width: 250px;
-    float: left;
     margin-top: 20px;
     border: 1px solid #989AB8;
     box-sizing: border-box;
     border-radius: 15px;
-  }
+  } */
 
   #groot_header {
     margin-top: 20px;

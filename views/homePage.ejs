@@ -9,10 +9,10 @@
 <!-- page needs to be separated into 3 columns. Utilized CSS bootstrap to -->
 <!-- separate calendar and invite details -->
 
-<div class="home-container-fluid">
+<div class="container-fluid">
     <div class="row">
         <!-- calendar on column 1 -->
-        <div class="col-sm-4">
+        <div class="col-lg-4">
             <span id='calendar'>
                 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
                     <script>
@@ -28,16 +28,17 @@
                     </script>
             </span>
         </div>
-        <div class="col-sm-2">
+        <div class="col-lg-2">
             <h1 id="groot_header">Invitations</h1>
             <!-- image for the event in column 2 -->
+            <!-- utilized bootstrap to make image responsive -->
             <div>
-                <img src="/assets/homePage/test_groot_image.jpeg" alt="Mock event" class="groot">
+                <img src="/assets/homePage/test_groot_image.jpeg" alt="Mock event" class="img-fluid">
             </div>
         </div>
 
         <!-- logistical information for event in column3 -->
-        <div class="col-sm-6">
+        <div class="col-lg-6">
             <div class="event-info">
                 <p class="event-title">Groot Watch Party</p>
                 <p>
