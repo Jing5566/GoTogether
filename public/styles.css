@@ -10,18 +10,19 @@ body {
 .custom-navbar {
   border-bottom: 1px solid #989AB8;
   /* height: 60px; */
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   }
 
   /* styles for the text underneath the icon */
 .icon-text-container {
   /* display: flex; */
-  /* flex-direction: column; Stack items vertically */
-  /* align-items: center; Center items horizontally */
   text-align: center;
   /*Center text within the container */
-  /* margin-top: 28%; */
   width: 70px;
-  padding: 0px;
+  /* padding: 0px; */
   font-size: 12px;
   color: #0F231C;
   }
@@ -30,16 +31,6 @@ body {
 .icon-text-container i {
   font-size: 20px;
   color: #0F231C;
-  }
-
-
-  /* responsiveness */
-  @media (min-width: 768px) {
-  .navbar-nav {
-  margin-top: 25px;
-  }
-
-
   }
 
 
@@ -82,11 +73,11 @@ body {
 
 
   .small_box_container {
-  /* position: relative; */
+  position: relative;
   max-width: 557px;
   width: 90%;
   /* height: fit-content; */
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
