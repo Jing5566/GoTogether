@@ -3,8 +3,8 @@
 <% for (let element of Users) { %> <!-- This is grabbing information passed to this route via a User, it then goes through
 each part User and grabs information that is attached to certain key values and makes a profile contained inside a div,
 it also has a button that fires a route that allows you to update your information-->
-    <div class="box_containerCreate">
-        <div>
+    <div class="container box_containerCreate justify-content-center align-items-center">
+        <div box="boxMessage">
         <p class="title">Profile</p>
         <img src="<%=element.Profile_Image%>" alt="" class="ImageHere">
         <ul class="ProfileView">
@@ -81,7 +81,6 @@ it also has a button that fires a route that allows you to update your informati
         <button class="btn2-style"
         type="submit">Finish</button>
     </form>
-
     <br>
     <br>
     </div>
