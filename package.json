@@ -4,9 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
     "start": "DEBUG=mongo node .",
     "test": "DEBUG=mongo NODE_ENV=test mocha --timeout 4000"
   },

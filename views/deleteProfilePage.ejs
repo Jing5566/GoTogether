@@ -1,30 +1,27 @@
-<%- include("partials/header2.ejs", {data: "Delete Profile"})%> <!-- This is the header for the deleteProfilePage-->
+<%- include("partials/newHeader2.ejs", {data: "Delete Profile" })%>
 
-<div class="small_box_container"> <!-- This is a container asking the user if they are sure that they want to delete their
+    <!-- This is the header for the deleteProfilePage-->
+    <div class="container small_box d-flex text-center justify-content-center align-items-center">
+        <!-- This is a container asking the user if they are sure that they want to delete their
                                         account information-->
+        <div class="boxMessage">
+            <p>Are you sure you want to delete your profile?</p>
+            <!-- button#1 code  This button take the user back to the homepage if they do not wish to delete their account-->
+            <div class="button1">
+                <form action="/homePage" method="get">
+                    <button class="btn1-style" type="submit">Keep it</button>
+                </form>
+            </div>
+            <!-- button#2 code This button will run a route that removes their profile from our database-->
+            <div class="button2">
+                <form action="/deletionConfirmationPage" method="get">
+                    <button class="btn2-style" type="submit">Delete it</button>
+                    <p class="small_text"></p>
+                </form>
+            </div>
+            <br>
+            <br>
+        </div>
+        </div>
 
-    <div class="boxMessage">
-        <p>Are you sure you want to delete your profile?</p>
-    </div>
-    <!-- button#1 code  This button take the user back to the homepage if they do not wish to delete their account-->
-    <div class="button1">
-        <form action="/homePage" method="get">
-        <button class="btn1-style"
-        type="submit">Keep it</button>
-        </form>
-    </div>
-
-    <!-- button#2 code This button will run a route that removes their profile from our database-->
-    <div class="button2">
-        <form action="/deletionConfirmationPage" method="get">
-        <button class="btn2-style" type="submit">Delete it</button>
-        <p class="small_text"></p>
-    </form>
-    </div>
-        <br>
-        <br>
-        <br>
-        <br>
-</div>
-
-<%- include("partials/footer.ejs") %>
+        <%- include("partials/footer.ejs") %>

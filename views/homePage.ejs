@@ -1,4 +1,4 @@
-<%- include("partials/header2.ejs", {data: "Home"})%> <!-- This is the header for the home/dashboard page -->
+<%- include("partials/newHeader2.ejs", {data: "Home"})%> <!-- This is the header for the home/dashboard page -->
 
 <style>
     body{
@@ -12,7 +12,7 @@
 <div class="container-fluid">
     <div class="row">
         <!-- calendar on column 1 -->
-        <div class="col-sm-4">
+        <div class="col-lg-4">
             <span id='calendar'>
                 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
                     <script>
@@ -26,19 +26,19 @@
                         });
 
                     </script>
-
             </span>
         </div>
-        <div class="col-sm-2">
+        <div class="col-lg-2">
             <h1 id="groot_header">Invitations</h1>
             <!-- image for the event in column 2 -->
+            <!-- utilized bootstrap to make image responsive -->
             <div>
-                <img src="/assets/homePage/test_groot_image.jpeg" alt="Mock event" class="groot">
+                <img src="/assets/homePage/test_groot_image.jpeg" alt="Mock event" class="img-fluid">
             </div>
         </div>
-        
+
         <!-- logistical information for event in column3 -->
-        <div class="col-sm-6">
+        <div class="col-lg-6">
             <div class="event-info">
                 <p class="event-title">Groot Watch Party</p>
                 <p>
@@ -51,7 +51,7 @@
                 </p>
                 <p>Austin, Tx</p>
                 <p>
-                    Look forward to seeing everyone for the Groot watch party!!! 
+                    Look forward to seeing everyone for the Groot watch party!!!
                 </p>
                 <p>4 Spots left</p>
                 <button class="btn2-style" type="submit">Learn more</button>
@@ -59,6 +59,5 @@
         </div>
     </div>
 </div>
-
 
 <%- include("partials/footer.ejs") %>

@@ -1,15 +1,12 @@
-<%- include("partials/header2.ejs", {data: "Deletion Confirmation"})%> <!-- This is the header for the deletionconfirmation page-->
+<%- include("partials/newHeader2.ejs", {data: "Deletion Confirmation"})%> <!-- This is the header for the deletionconfirmation page-->
 
-<div class="small_box_container"> <!-- A container that tells the user that their data was deleted -->
-
+<!-- a responsive container using Bootstrap classes -->
+<div class="container small_box d-flex text-center justify-content-center align-items-center">
     <div class="boxMessage">
-        <p>Your profile has been successfully deleted!</p>
-        <br>
+    <p>Your profile has been successfully deleted!</p>
         <br>
         <i class="fa-regular fa-trash-can fa-2xl" style="color: #0f231c;"></i>
     </div>
-        <br>
-
 </div>
 
 <%- include("partials/footer.ejs") %> <!-- This is the footer for the deletionconfirmation page-->

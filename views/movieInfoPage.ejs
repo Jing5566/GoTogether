@@ -1,17 +1,20 @@
-<%- include("partials/header2.ejs", {data: "Favorite Movie"})%> <!-- This is the header for the movieInfoPage -->
+<%- include("partials/newHeader2.ejs", {data: "Favorite Movie"})%> <!-- This is the header for the movieInfoPage -->
 
-    <% if (data) {%> <!-- if the data was successfully pulled here, use it to fill out the div with the name of the movie,
+    <% if (data) {%>
+      <!-- if the data was successfully pulled here, use it to fill out the div with the name of the movie,
                           an image of the poster, as well as a description of the movie-->
-        <div class="box_container">
+        <div class="container box_container d-flex text-center justify-content-center align-items-center">
+          <div class="boxMessage">
+            <!-- search by the movie name that the user put in for the favorite movie -->
+            <!-- get the movie info from IMDB API then display on this page -->
           <h1 class="title"> <%= data.title %></h1>
           <% let image = data.poster_path
                       ? "https://image.tmdb.org/t/p/w200" + data.poster_path
                       : "/assets/image.jpeg"
           %>
           <img src="<%= image %>" alt="<%= data.title %>" class="movie_image">
-
           <p class="text_container"><%= data.overview %></p>
-
+          <!-- the back button takes users back to the viewProfilePage -->
           <div class="button1">
             <form action="/viewProfilePage" method="get">
             <button class="btn1-style" type="submit">Back</button>
@@ -21,8 +24,9 @@
             <br>
             <br>
             <br>
-            <br>
+
         </div>
+      </div>
     <% } else { %> <!-- if the movie data was not pulled, supply a paragraph that says "Movie not found."-->
         <p>Movie not found.</p>
     <% } %>

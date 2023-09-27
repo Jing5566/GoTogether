@@ -1,16 +1,10 @@
-<%- include("partials/header1.ejs", {data: "Landing Page" })%> <!-- This is the header for the landingPage-->
+<%- include("partials/newHeader1.ejs", {data: "Landing Page" })%> <!-- This is the header for the landingPage-->
     <!-- Landing Page BackgroundImage -->
-    <style> 
-        body {
-            background-image: url(assets/landingPage/outdoorsRunners.png);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center 100px;
-        }
-    </style>
+    <div class="backgroundImage">
 
-    <div class="small_box_container"> <!-- This is the first route the user is going to see when the website is launched 
+    <div class="container small_box d-flex text-center justify-content-center align-items-center"> <!-- This is the first route the user is going to see when the website is launched
 it will ask the user to login if they already have an account or to make one if they do not have one-->
+        <div class="boxMessage">
         <h1 class="overview"> Let's go together!</h1>
         <p class="landingPage_subtext">Strangers are just friends you haven't met!</p>
         <div class="landingPage_labels">
@@ -49,6 +43,8 @@ it will ask the user to login if they already have an account or to make one if 
         <br>
         <br>
         <br>
+        </div>
+    </div>
     </div>
 
     <%- include("partials/footer.ejs") %> <!-- This is the footer for the landingPage-->
