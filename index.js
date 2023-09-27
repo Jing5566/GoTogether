@@ -69,7 +69,7 @@ app.post("/createAccount", function(req, res){
     UserModel.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log(err);
-            return res.render("signupPage.ejs")
+            res.render("signupPage.ejs")
         } else {
             console.log("This is checking user", user)
             passport.authenticate("local")(req, res, function(){

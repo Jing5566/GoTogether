@@ -19,11 +19,11 @@ const UserLoginSchema = mongoose.Schema({
     // },
 
     password: {
-        type: String,
-        minLength: [6, "Must be at least 6 characters long!"],
-        maxLength: [20, "Must be less than 20 characters!"],
-        required: [true, "Password must be provided to create an account!"],
-        set: b => b === '' ? undefined : b
+        type: String
+        // minLength: [6, "Must be at least 6 characters long!"],
+        // maxLength: [20, "Must be less than 20 characters!"],
+        // required: [true, "Password must be provided to create an account!"],
+        // set: b => b === '' ? undefined : b
     }
 });
 
