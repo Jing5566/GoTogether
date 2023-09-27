@@ -29,9 +29,9 @@ body {
   color: #0F231C;
   }
 
-/* .icon-text-container p{
-  font-size: 10px;
-} */
+.icon-text-container p{
+  font-size: 12px;
+}
 
   /* styles for the navbar buttons */
   .custom-nav-button {
@@ -50,14 +50,12 @@ body {
   border-color: #989AB8;
   }
 
-
   /* styles for the dropdown profile button */
   .dropdown-item:active {
   background-color: #A5A5F5;
   color: #0f231c;
   }
   /* navbar styles ends */
-
 
   /* landingPage styles starts*/
   .backgroundImage {
@@ -68,24 +66,32 @@ body {
   min-height: 100vh;
   }
 
-
-  .small_box_container {
+  /* .small_box_container {
   position: relative;
   max-width: 557px;
   width: 90%;
-  /* height: fit-content; */
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  /* margin: 0 auto; */
+  border: 1px solid #989AB8;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: rgba(247, 246, 252, 0.8);
+  } */
+
+  .small_box{
+  position: relative;
+  max-width: 557px;
+  min-height: 300px;
+  margin-top: 10%;
   border: 1px solid #989AB8;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 15px;
   background-color: rgba(247, 246, 252, 0.8);
   }
-
 
   .landingPage_subtext {
   font-family: "Inter";
@@ -96,15 +102,11 @@ body {
   text-align: center;
   }
 
-
   .landingPage_labels label {
   display: inline-block;
   width: 110px;
   }
-
-
   /* landingPage styles ends*/
-
 
   /* movieInfoPage styling starts here */
   /* styling for the big purple box*/
@@ -112,8 +114,7 @@ body {
   position: relative;
   width: 557px;
   height: fit-content;
-  top: 60px;
-  margin: 0 auto;
+  margin-top: 5%;
   border: 1px solid #989AB8;
   padding: 20px;
   box-sizing: border-box;
@@ -121,7 +122,6 @@ body {
   background-color: #F7F6FC;
   opacity: 0.8;
   }
-
 
   /* styling for headers*/
   .title {
@@ -132,7 +132,6 @@ body {
   margin-bottom: 30px;
   text-align: center;
   }
-
 
   /* styling for pictures,
   COPY and MAKE a class for your img item
@@ -146,7 +145,6 @@ body {
   margin-right: auto;
   }
 
-
   /* styling for text blocks */
   .text_container {
   margin-top: 25px;
@@ -155,7 +153,6 @@ body {
   color: #0F231C;
   text-align: center;
   }
-
 
   /* styles for the buttons */
   .btn1-style {
@@ -168,7 +165,6 @@ body {
   box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.3);
   }
 
-
   .button1 {
   position: absolute;
   /* display: flex; */
@@ -180,7 +176,6 @@ body {
   color: #0f231c;
   }
 
-
   .btn2-style {
   background-color: #FFE459;
   height: 32.5px;
@@ -190,7 +185,6 @@ body {
   cursor: pointer;
   box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.3);
   }
-
 
   .button2 {
   position: absolute;
@@ -202,7 +196,6 @@ body {
   color: #0f231c;
   }
 
-
   .small_text {
   font-family: 'Inter';
   font-size: 12px;
@@ -212,18 +205,14 @@ body {
   }
   /* movieInfoPage styling ends*/
 
-
   /* signup page styling starts*/
   label {
-  /* position: absolute; */
-  margin-left: 76px;
   margin-bottom: 20px;
   text-align: left;
   font-family: "Inter";
   font-size: 16px;
   color: #0f231c;
   }
-
 
   input {
   border-radius: 7px;
@@ -233,6 +222,11 @@ body {
   border-color: #0f231c;
   }
 
+  input::placeholder{
+    font-family: "Inter";
+    font-size: 14px;
+    color: #686389;
+  }
 
   .leftBtn {
   position: absolute;
@@ -241,7 +235,6 @@ body {
   font-size: 18px;
   }
 
-
   .rightBtn {
   position: absolute;
   font-size: 18px;
@@ -249,13 +242,11 @@ body {
   right: 95px;
   }
 
-
   .signupPage_labels label {
   display: inline-block;
   width: 110px;
   }
   /* signup page style ends */
-
 
   /* movieInfoPage styling starts */
   /* Paragraph font for the landing page text under the header */
@@ -267,7 +258,6 @@ body {
   margin-bottom: 30px;
   text-align: center;
   }
-
 
   /* .container-fluid {
   position: relative;
@@ -282,7 +272,6 @@ body {
   background-color: #F7F6FC;
   overflow: auto;
   } */
-
 
   /* this code is for the calendar that will function in the Home Page */
   #calendar {
@@ -302,7 +291,6 @@ body {
   background-color: #D4C9F1;
   }
 
-
   /* this code for the invitation on the home page */
   .groot {
   width: 250px;
@@ -313,17 +301,14 @@ body {
   border-radius: 15px;
   }
 
-
   #groot_header {
   margin-top: 20px;
   }
-
 
   #groot_ul {
   margin-top: 20px;
   float: right;
   }
-
 
   .event-title {
   text-align: left;
@@ -334,7 +319,6 @@ body {
   margin: 12px;
   }
 
-
   .event-info {
   margin-top: 80px;
   padding: 20px;
@@ -343,7 +327,6 @@ body {
   border-radius: 15px;
   }
 
-
   .new-event-info {
   /* margin-top: 80px; */
   padding: 100px;
@@ -351,7 +334,6 @@ body {
   /* margin-bottom: 50px; */
   border-bottom: #0F231C solid 1px;
   }
-
 
   /* ---------------------------------------------------------- */
   /* This is the start of Tom's CSS Styling */
@@ -371,7 +353,6 @@ body {
   overflow: auto;
   }
 
-
   .box_containerView img {
   /* This is for the view page */
   width: 20%;
@@ -379,30 +360,27 @@ body {
   display: block;
   }
 
-
   .ProfileView {
   /* This is for the view page */
   list-style-type: none;
   }
 
-
   .ProfileView li {
   margin: 5px;
   }
 
-
   /* This is the end of the viewProfilePage Route's Styling
   /* ---------------------------------------------------------- */
   /* This is the start of the createProfilePage Styling */
-
 
   .box_containerCreate {
   /* This for the create page */
   position: relative;
   max-width: 557px;
   height: fit-content;
-  top: 60px;
-  margin: 0 auto;
+  /* top: 60px; */
+  /* margin: 0 auto; */
+  margin-top:5%;
   border: 1px solid #989AB8;
   padding: 20px;
   box-sizing: border-box;
@@ -411,28 +389,23 @@ body {
   overflow: auto;
   }
 
-
   .box_containerCreate label {
   display: inline-block;
   width: 110px;
   }
 
-
   .CreateTopper {
   text-align: center;
   }
-
 
   .CreateView {
   /* This for the create page */
   list-style-type: none;
   }
 
-
   .box_containerCreate .ImageHere {
   justify-content: center;
   }
-
 
   .ImageHere {
   display: block;
@@ -443,7 +416,6 @@ body {
   margin-right: auto;
   margin-bottom: 20px;
   }
-
 
   /* This is the end of the createProfilePage Styling */
   /* ----------------------------------------------------------*/
@@ -464,21 +436,18 @@ body {
   }
   /* This is the end of Tom's CSS styling */
 
-
   /* deleteProfilePage styling starts here */
   .boxMessage {
-  position: relative;
+  /* position: relative; */
   font-family: inter;
   font-size: 24px;
   color: #0f231c;
-  margin-top: 15%;
-  margin-bottom: 15%;
-  text-align: center;
+  /* margin-top: 15%; */
+  /* margin-bottom: 15%; */
+  /* text-align: center; */
   }
 
-
   /* deleteProfilePage styling ends here */
-
 
   /* footer positioning */
   footer {
