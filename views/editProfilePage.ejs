@@ -1,7 +1,8 @@
-<%- include("partials/newHeader1.ejs", {data: "Edit Profile"})%> <!-- This is the header fo the edit profile page -->
+<%- include("partials/newHeader2.ejs", {data: "Edit Profile"})%> <!-- This is the header fo the edit profile page -->
 
 <% for (let element of Users) { %> <!-- This is code is going to change -->
-    <div class="box_containerCreate">
+    <div class="container box_containerCreate justify-content-center align-items-center">
+        <div box="boxMessage">
         <p class="title">Profile</p>
         <img src="<%=element.Profile_Image%>" alt="" class="ImageHere">
         <ul class="ProfileView">
@@ -43,7 +44,7 @@
             </li>
             <li>
                 <img src="/assets/icons/creat&viewProfilePages/movie.png" alt="">
-                <a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"> Favorite Movie: <%= element.Favorite_Movie %></a>
+                Favorite Movie:<a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"><%= element.Favorite_Movie %></a>
             </li>
             <li>
                 <img src="/assets/icons/creat&viewProfilePages/artist.png" alt="">
@@ -75,6 +76,7 @@
             <br>
             <br>
             <br>
+        </div>
         </div>
     </div>
     <% } %>

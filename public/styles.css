@@ -220,12 +220,14 @@ body {
   width: 220px;
   border-width: 1px;
   border-color: #0f231c;
+  font-size: 16px;
+  color:#0f231c;
   }
 
   input::placeholder{
     font-family: "Inter";
-    font-size: 14px;
-    color: #686389;
+    font-size: 16px;
+    color:#0f231c;
   }
 
   .leftBtn {
@@ -258,20 +260,6 @@ body {
   margin-bottom: 30px;
   text-align: center;
   }
-
-  /* .container-fluid {
-  position: relative;
-  width: 95%;
-  height: fit-content;
-  top: 60px;
-  margin: 0 auto;
-  border: 1px solid #989AB8;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 15px;
-  background-color: #F7F6FC;
-  overflow: auto;
-  } */
 
   /* this code is for the calendar that will function in the Home Page */
   #calendar {
@@ -379,6 +367,11 @@ body {
   border-radius: 15px;
   background-color: #F7F6FC;
   overflow: auto;
+  }
+
+  ::placeholder{
+    color:#5d587c;
+    font-size: 16px;
   }
 
   .box_containerCreate label {
