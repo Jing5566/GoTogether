@@ -6,40 +6,62 @@
                                         account and once filled out, will be sent to the database upon pressing Create Account-->
         <div class="boxMessage">
 
-        <h1 class="title">Sign up</h1>
-        <div class="signupPage_labels">
-            <!-- create an form for signup inputs including form validation-->
-            <form style="margin-bottom:20px" ; action="/createAccount" method="post">
-                <label for="User_Username">Username:</label>
-                <input type="text" name="Username" maxlength="15" id="User_Username" placeholder="Max of 15 characters"
-                    required>
-                <br>
-                <label for="User_Email">Email:</label>
-                <input type="email" name="Email" id="User_Email" required>
-                <br>
-                <label for="User_Password">Password:</label>
-                <input type="password" name="Password" maxlength="20" minlength="6" id="User_Password"
-                    placeholder="Must be 6-20 characters long" required>
-                <br>
-                <!-- create a button links to the create profile page -->
-                <div class="button2" >
-                    <!-- This button fires the /createAccount route -->
-                    <button class="btn2-style" type="submit">Create Account</button>
-                    <p class="small_text"></p>
-                </div>
-            </form>
-        </div>
+            <h1 class="title">Sign up</h1>
+            <div class="signupPage_labels">
+                <!-- create an form for signup inputs including form validation-->
+                <form style="margin-bottom:20px" ; action="/createAccount" method="post">
+                    <label for="User_Username">Username:</label>
+                    <input type="text" name="Username" maxlength="15" id="User_Username"
+                        placeholder="Max of 15 characters" required>
+                    <br>
+                    <label for="User_Email">Email:</label>
+                    <input type="email" name="Email" id="User_Email" required>
+                    <br>
+                    <label for="User_Password">Password:</label>
+                    <input type="password" name="Password" maxlength="20" minlength="6" id="User_Password"
+                        placeholder="Must be 6-20 characters long" required>
 
-        <div class="leftBtn">
-            <!-- This button will send you back to the landingPage-->
-            <a href="/landingPage">
-                <button class="btn1-style" type="submit">Log in</button></a>
-            <p class="small_text">I have an account</p>
+                    <br>
+                    <div class="showPasswordContainer">
+
+                        <label for="showPassword" class="showPassword">Show Password</label>
+                        <input type="checkbox" onclick="showPass()" id="showPassword" class="showPasswordBox">
+
+                    </div>
+
+
+
+                    <br>
+                    <!-- create a button links to the create profile page -->
+                    <div class="button2">
+                        <!-- This button fires the /createAccount route -->
+                        <button class="btn2-style" type="submit">Create Account</button>
+                        <p class="small_text"></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="leftBtn">
+                <!-- This button will send you back to the landingPage-->
+                <a href="/landingPage">
+                    <button class="btn1-style" type="submit">Log in</button></a>
+                <p class="small_text">I have an account</p>
+            </div>
+            <br>
+            <br>
         </div>
-<br>
-<br>
-    </div>
     </div>
 
     <%- include("partials/footer.ejs") %>
         <!-- This is the footer for the signup Page-->
+
+        <script>
+            function showPass() {
+                var x = document.getElementById("User_Password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>

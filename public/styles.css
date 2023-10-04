@@ -231,6 +231,27 @@ body {
     padding-left: 6px;
   }
 
+  .showPassword{
+    font-family: 'Inter';
+    font-size: 12px;
+    color: #0F231C;
+    /* text-align: center; */
+    /* vertical-align:middle; */
+    /* margin-left:20% */
+  }
+
+  .showPasswordBox{
+    display:absolute;
+    transform: scale(0.6);
+    margin-left: 125px;
+  }
+
+  .showPasswordContainer{
+    display: flex;
+  }
+
+  
+
   .leftBtn {
   position: absolute;
   margin-top: 3%;
@@ -386,6 +407,7 @@ body {
 
   .box_containerCreate .ImageHere {
   justify-content: center;
+  color:#0F231C;
   }
 
   .ImageHere {

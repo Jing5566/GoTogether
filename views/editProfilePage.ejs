@@ -1,10 +1,11 @@
 <%- include("partials/newHeader2.ejs", {data: "Edit Profile"})%> <!-- This is the header fo the edit profile page -->
 
-<div class="box_containerCreate"> <!-- This container will read the information that the user had submitted, fill out the form
+<div class="container box_containerCreate justify-content-center align-items-center"> <!-- This container will read the information that the user had submitted, fill out the form
 with what they changed, and allow them to make changes and submit them to the database!-->
-    <p class="title">Edit Your Profile</p>
+<div class="boxMessage">
+<p class="title">Edit Your Profile</p>
     <% if(Users.Profile_Image === undefined) { %>
-        <img src="/assets/icons/creat&viewProfilePages/defaultProfilePicture.png" class="ImageHere" alt="blank profile image">
+        <img src="/assets/icons/creat&viewProfilePages/profileIcon.png" class="ImageHere" alt="blank profile image">
     <% } else { %>
         <img src="<%= Users.Profile_Image %>" class="ImageHere" alt="This is the users profile image">
     <% } %>
@@ -94,6 +95,7 @@ with what they changed, and allow them to make changes and submit them to the da
 <br>
             </div>
         </form>
+    </div>
 </div>
 
 <%- include("partials/footer.ejs") %> <!-- This code is going to change -->
