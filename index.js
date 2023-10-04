@@ -156,6 +156,15 @@ app.get("/deleteProfilePage", (req,res)=>{
     res.render("deleteProfilePage.ejs")
 })
 
+app.post("/deleteProfile", async (req, res) => {
+    await GoTogetherModel.deleteMany({})
+    .then(res.redirect("/deletionConfirmationPage"))
+    .catch(err => {
+        console.log('Error deleting from db: ', err)
+        res.status(450)
+    })
+})
+
 // This route will give you a final warning that you are about to delete your profile from our database, proceed with caution
 app.get("/deletionConfirmationPage", (req,res)=>{
     res.render("deletionConfirmationPage.ejs")

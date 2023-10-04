@@ -7,7 +7,7 @@ with what they changed, and allow them to make changes and submit them to the da
     <% if(Users.Profile_Image === undefined) { %>
         <img src="/assets/icons/creat&viewProfilePages/profileIcon.png" class="ImageHere" alt="blank profile image">
     <% } else { %>
-        <img src="<%= Users.Profile_Image %>" class="ImageHere" alt="This is the users profile image">
+        <img src="<%= Users.Profile_Image %>" class="ImageHere" alt="Invalid Image URL">
     <% } %>
         <form action="/editProfile" method="POST">
             <ul class="CreateView">
