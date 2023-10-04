@@ -6,7 +6,11 @@ it also has a button that fires a route that allows you to update your informati
     <div class="container box_containerCreate justify-content-center align-items-center">
         <div box="boxMessage">
         <p class="title">Profile</p>
-        <img src="<%=element.Profile_Image%>" alt="" class="ImageHere">
+        <% if(element.Profile_Image === undefined) { %>
+            <img src="/assets/icons/creat&viewProfilePages/defaultProfilePicture.png" class="ImageHere" alt="Invalid Image URL">
+        <% } else { %>
+            <img src="<%=element.Profile_Image%>" alt="" class="ImageHere">
+        <% } %>
         <ul class="ProfileView">
             <li>
                 <img src="/assets/icons/creat&viewProfilePages/first&lastName.png" alt="">
@@ -20,50 +24,94 @@ it also has a button that fires a route that allows you to update your informati
                 <img src="/assets/icons/creat&viewProfilePages/birthday.png" alt="">
                 Birthday: <%= element.Birthday %>
             </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/ageRange.png" alt="">
-                Age: <%= element.Age %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/gender.png" alt="">
-                Gender: <%= element.Gender %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/currentCity.png" alt="">
-                Current City: <%= element.Current_City %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/hometown.png" alt="">
-                Hometown: <%= element.Hometown %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/profession.png" alt="">
-                Profession: <%= element.Profession %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/interests.png" alt="">
-                Interests: <%= element.Interests %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/movie.png" alt="">
-                Favorite Movie: <a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"> <%= element.Favorite_Movie %></a>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/artist.png" alt="">
-                Favorite Artist: <%= element.Favorite_Artist %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/food.png" alt="">
-                Favorite Food: <%= element.Favorite_Food %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/language.png" alt="">
-                Languages: <%= element.Languages %>
-            </li>
-            <li>
-                <img src="/assets/icons/creat&viewProfilePages/moreAboutYou.png" alt="">
-                Brief Summary: <%= element.More_About_You %>
-            </li>
+            <% if(element.Age === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/ageRange.png" alt="">
+                    Age: <%= element.Age %>
+                </li>
+            <% } %>
+            <% if(element.Gender === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/gender.png" alt="">
+                    Gender: <%= element.Gender %>
+                </li>
+            <% } %>
+            <% if(element.Current_City === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/currentCity.png" alt="">
+                    Current City: <%= element.Current_City %>
+                </li>
+            <% } %>
+            <% if(element.Hometown === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/hometown.png" alt="">
+                    Hometown: <%= element.Hometown %>
+                </li>
+            <% } %>
+            <% if(element.Profession === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/profession.png" alt="">
+                    Profession: <%= element.Profession %>
+                </li>
+            <% } %>
+            <% if(element.Interests === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/interests.png" alt="">
+                    Interests: <%= element.Interests %>
+                </li>
+            <% } %>
+            <% if(element.Favorite === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/movie.png" alt="">
+                    Favorite Movie: <a href="/movieInfoPage?titlesearch=<%= element.Favorite_Movie %>"> <%= element.Favorite_Movie %></a>
+                </li>
+            <% } %>
+            <% if(element.Favorite_Artist === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/artist.png" alt="">
+                    Favorite Artist: <%= element.Favorite_Artist %>
+                </li>
+            <% } %>
+            <% if(element.Favorite_Food === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/food.png" alt="">
+                    Favorite Food: <%= element.Favorite_Food %>
+                </li>
+            <% } %>
+            <% if(element.Languages === undefined) { %>
+                <li class="di"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/language.png" alt="">
+                    Languages: <%= element.Languages %>
+                </li>
+            <% } %>
+            <% if(element.More_About_You === undefined) { %>
+                <li class="disabled"></li>
+            <% } else { %>
+                <li>
+                    <img src="/assets/icons/creat&viewProfilePages/moreAboutYou.png" alt="">
+                    Brief Summary: <%= element.More_About_You %>
+                </li>
+            <% } %>
         </ul>
     </div>
 
